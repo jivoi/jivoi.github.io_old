@@ -1,10 +1,8 @@
 ---
 layout: post
-title: First Post?
+title: First Post!
 ---
-
 h1. {{ page.title }}
-
 p(meta). 16 september 2011 
 
 Just 4 Fun
