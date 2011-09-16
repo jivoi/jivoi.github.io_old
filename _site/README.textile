@@ -1,0 +1,6 @@
+jivoi.github.com blog
+
+This was forked from https://github.com/mojombo/mojombo.github.com .
+License
+
+_posts is copyright by jivoi, but the rest is licensed MIT by Tom Preston-Werner (https://github.com/mojombo)
