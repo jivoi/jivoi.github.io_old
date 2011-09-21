@@ -1,8 +1,0 @@
----
-layout: post
-title: Template!
----
-h1. {{ page.title }}
-p(meta). 16 september 2011 
-
-Just 4 Fun
