@@ -1,0 +1,17 @@
+---
+layout: default
+title: Результат Поиска
+---
+
+<script src="/js/jquery-tapir.min.js"></script>
+
+<div id="content">
+  <img src="/images/loading.gif" style="border:none; margin:auto; width:32px; height:32px; box-shadow:none; display: block;"/>
+</div>
+
+<script>
+  $('#content').tapir({
+    token: '4dbfc79e3f61b05b53000011',
+    complete: function(){ $('#content img').remove() }
+  });
+</script>

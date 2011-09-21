@@ -1,0 +1,41 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Я Живой</title>
+  <link href="http://jivoi.github.com/feed.xml" rel="self"/>
+  <link href="http://jivoi.github.com/"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://jivoi.github.com/</id>
+  <author>
+    <name>Я Живой</name>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <title type="html">{{ post.title | xml_escape }}</title>
+    {% if post.elsewhere %}
+      <link href="{{ post.elsewhere.url }}"/>
+    {% else %}
+      <link href="http://jivoi.github.com{{ post.url }}"/>
+    {% endif %}
+    <id>http://jivoi.github.com{{ post.url }}</id>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <summary>{{ post.excerpt | xml_escape }}</summary>
+    <content type="html">
+      {% if post.elsewhere %}
+        {{ post.excerpt }}
+        {% if post.elsewhere %}
+          <span class="small">Опубликовано как гость <a href="{{ post.elsewhere.main_url }}">{{ post.elsewhere.name}}</a>.</span>
+        {% endif %}
+      {% else %}
+        {% if post.author %}
+          &lt;p&gt;Гостевой пост &lt;a href=&quot;http://twitter.com/{{ post.author.twitter }}&quot; title=&quot;{{ post.author.full}}&quot;&gt;@{{ post.author.twitter }}&lt;/a&gt;. {{ post.author.description | xml_escape }}
+        {% endif %}{{ post.content | xml_escape }}
+      {% endif %}
+    </content>
+  </entry>
+  {% endfor %}
+</feed>

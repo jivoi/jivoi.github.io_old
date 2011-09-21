@@ -1,0 +1,16 @@
+---
+layout: post
+title: Name of Post
+excerpt: small snippet for root
+---
+
+Main text
+
+{% highlight ruby %}
+some commands
+{% endhighlight %}
+
+![Description for Img](http://jivoi.github.com/images/.png)
+<span class="small">Text under the picture</span>
+
+### Janus
