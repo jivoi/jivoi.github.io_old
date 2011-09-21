@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-09-21T16:56:00+04:00</updated>
+  <updated>2011-09-21T17:06:58+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -22,13 +22,11 @@
     <content type="html">
       
         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut enim quam, non iaculis erat. Donec dapibus, massa eu sollicitudin laoreet, justo nisi porttitor eros, vitae varius lacus neque ac tortor. Maecenas vulputate dolor sed magna feugiat suscipit. Ut pellentesque pellentesque dui. Proin libero turpis, commodo et ultricies nec, pulvinar et nulla. Duis eu nisi a nulla vulputate molestie. Donec vel velit vitae ante mattis porta vel sed ipsum. Donec tristique sapien felis, eget vestibulum libero. Vivamus in lectus non urna blandit consequat nec adipiscing ligula. Maecenas volutpat, nulla a semper rhoncus, urna odio convallis tellus, in pharetra dolor augue nec felis. Aliquam aliquet congue ligula sed vestibulum. Nam varius, enim eget dictum tempus, nulla libero dignissim mi, nec egestas nisi dolor vel lacus. Suspendisse odio leo, aliquam ac sagittis vel, vestibulum sed est. Proin pellentesque gravida bibendum. Sed feugiat malesuada libero. Etiam malesuada, est vel tempor porttitor, lectus augue condimentum est, id mattis nunc ante eget diam.&lt;/p&gt;
-&lt;div&gt;
-&lt;pre&gt;
-&lt;code class='ruby'&gt;class Validatable
-include ActiveModel::Validations
-validates_with PirateValidator
-end&lt;/code&gt;
-&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Validatable&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveModel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Validations&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;validates_with&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;PirateValidator&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut enim quam, non iaculis erat. Donec dapibus, massa eu sollicitudin laoreet, justo nisi porttitor eros, vitae varius lacus neque ac tortor. Maecenas vulputate dolor sed magna feugiat suscipit. Ut pellentesque pellentesque dui. Proin libero turpis, commodo et ultricies nec, pulvinar et nulla. Duis eu nisi a nulla vulputate molestie. Donec vel velit vitae ante mattis porta vel sed ipsum. Donec tristique sapien felis, eget vestibulum libero. Vivamus in lectus non urna blandit consequat nec adipiscing ligula. Maecenas volutpat, nulla a semper rhoncus, urna odio convallis tellus, in pharetra dolor augue nec felis. Aliquam aliquet congue ligula sed vestibulum. Nam varius, enim eget dictum tempus, nulla libero dignissim mi, nec egestas nisi dolor vel lacus. Suspendisse odio leo, aliquam ac sagittis vel, vestibulum sed est. Proin pellentesque gravida bibendum. Sed feugiat malesuada libero. Etiam malesuada, est vel tempor porttitor, lectus augue condimentum est, id mattis nunc ante eget diam.&lt;/p&gt;
       
