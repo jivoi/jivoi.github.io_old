@@ -1,1 +1,7 @@
-exclude: lib
+auto: false
+url: http://yajivoi.com
+permalink: /:year/:month/:day/:title.html
+pygments: true
+
+author: Jivoi
+author_link: http://yajivoi.com
