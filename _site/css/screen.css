@@ -23,12 +23,14 @@ body
   background-position:center;
   background-size:100% auto;
   background: none repeat scroll 0 0 #222222;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* #font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: Verdana,sans-serif;
 }
 
 h2,h3,h4,h5,h6
 {
-  font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* #font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: Verdana,sans-serif;
   color: #333;
 }
 
@@ -231,7 +233,7 @@ h2
 
 h3
 {
-  font-size:28px;
+  font-size:21px;
 }
 
 h4
@@ -278,7 +280,8 @@ hr.right
 
 #content code,pre
 {
-  font-family:"Monaco", "Courier New", monospace;
+  /* font-family:"Monaco", "Courier New", monospace; */
+  font-family: Verdana,sans-serif;
   font-size: 12px;
   line-height: 150%;
 }
