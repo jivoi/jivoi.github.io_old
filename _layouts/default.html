@@ -39,19 +39,9 @@
               <a href="/contact">Контакты</a>
             </li>
             <li>
-<div id="cse" style="width: 100%;">Loading</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  google.load('search', '1', {language : 'ru', style : google.loader.themes.MINIMALIST});
-  google.setOnLoadCallback(function() {
-    var customSearchControl = new google.search.CustomSearchControl('016759571642263141485:ah5rsytnahk');
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-    customSearchControl.draw('cse');
-  }, true);
-</script>
-              <!-- <form action="/search/" method="get"> -->
-              <!--   <input type="search" name="query" placeholder="Поиск"/> -->
-              <!-- </form> -->
+              <form action="/search/" method="get">
+                <input type="search" name="query" placeholder="Поиск"/>
+              </form>
             </li>
           </ul>
           <hr class="right"/>
