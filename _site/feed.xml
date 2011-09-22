@@ -4,12 +4,39 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-09-22T12:46:59+04:00</updated>
+  <updated>2011-09-22T12:58:02+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
   </author>
 
+  
+  <entry>
+    <title type="html">MTB саундтреки</title>
+    
+      <link href="http://jivoi.github.com/2011/mtb-ost"/>
+    
+    <id>http://jivoi.github.com/2011/mtb-ost</id>
+    <updated>2011-09-22T00:00:00+04:00</updated>
+    <summary>Немного саундтреков для любителей MTB. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.</summary>
+    <content type="html">
+      
+        &lt;p&gt;&lt;img src='http://jivoi.github.com/images/blog/mtb.jpg' alt='mtb' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Немного саундтреков для любителей &lt;span class=&quot;caps&quot;&gt;MTB&lt;/span&gt;. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.&lt;/p&gt;
+&lt;p&gt;Список:&lt;/p&gt;
+&lt;p&gt;New World Disorder I &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24469598&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;br /&gt;
+New World Disorder II &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24510268&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;br /&gt;
+New World Disorder &lt;span class=&quot;caps&quot;&gt;III&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24510669&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;br /&gt;
+New World Disorder IV &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24529258&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;br /&gt;
+New World Disorder V &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24529259&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;br /&gt;
+New World Disorder VI &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24529260&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;br /&gt;
+New World Disorder &lt;span class=&quot;caps&quot;&gt;VII&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24529261&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;br /&gt;
+New World Disorder &lt;span class=&quot;caps&quot;&gt;VIII&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24529262&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;br /&gt;
+New World Disorder IX &lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;  &lt;a href=&quot;http://ifolder.ru/24529263&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt;&lt;/p&gt;
+      
+    </content>
+  </entry>
   
   <entry>
     <title type="html">Сноуборд саундтреки</title>
@@ -153,28 +180,6 @@
 10. Eurogap 3 — Pablo Films Качаем тут&lt;br /&gt;
 11. We Are 2012 Качаем тут&lt;br /&gt;
 12. Snowporning The 10th Movie Качаем тут&lt;/p&gt;
-      
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html">Lorem ipsum dolor</title>
-    
-      <link href="http://jivoi.github.com/2011/first-post"/>
-    
-    <id>http://jivoi.github.com/2011/first-post</id>
-    <updated>2011-09-16T00:00:00+04:00</updated>
-    <summary>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...ntesque dui. Proin libero turpis, commodo et ultricies nec, pulvinar et nulla. Duis eu nisi a nulla vulputate molestie. Donec vel velit vitae ante mattisntesque dui. Proin libero turpis, commodo et ultricies nec, pulvinar et nulla. Duis eu nisi a nulla vulputate molestie. Donec vel velit vitae ante mattis</summary>
-    <content type="html">
-      
-        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut enim quam, non iaculis erat. Donec dapibus, massa eu sollicitudin laoreet, justo nisi porttitor eros, vitae varius lacus neque ac tortor. Maecenas vulputate dolor sed magna feugiat suscipit. Ut pellentesque pellentesque dui. Proin libero turpis, commodo et ultricies nec, pulvinar et nulla. Duis eu nisi a nulla vulputate molestie. Donec vel velit vitae ante mattis porta vel sed ipsum. Donec tristique sapien felis, eget vestibulum libero. Vivamus in lectus non urna blandit consequat nec adipiscing ligula. Maecenas volutpat, nulla a semper rhoncus, urna odio convallis tellus, in pharetra dolor augue nec felis. Aliquam aliquet congue ligula sed vestibulum. Nam varius, enim eget dictum tempus, nulla libero dignissim mi, nec egestas nisi dolor vel lacus. Suspendisse odio leo, aliquam ac sagittis vel, vestibulum sed est. Proin pellentesque gravida bibendum. Sed feugiat malesuada libero. Etiam malesuada, est vel tempor porttitor, lectus augue condimentum est, id mattis nunc ante eget diam.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Validatable&lt;/span&gt;
-  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveModel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Validations&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;validates_with&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;PirateValidator&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut enim quam, non iaculis erat. Donec dapibus, massa eu sollicitudin laoreet, justo nisi porttitor eros, vitae varius lacus neque ac tortor. Maecenas vulputate dolor sed magna feugiat suscipit. Ut pellentesque pellentesque dui. Proin libero turpis, commodo et ultricies nec, pulvinar et nulla. Duis eu nisi a nulla vulputate molestie. Donec vel velit vitae ante mattis porta vel sed ipsum. Donec tristique sapien felis, eget vestibulum libero. Vivamus in lectus non urna blandit consequat nec adipiscing ligula. Maecenas volutpat, nulla a semper rhoncus, urna odio convallis tellus, in pharetra dolor augue nec felis. Aliquam aliquet congue ligula sed vestibulum. Nam varius, enim eget dictum tempus, nulla libero dignissim mi, nec egestas nisi dolor vel lacus. Suspendisse odio leo, aliquam ac sagittis vel, vestibulum sed est. Proin pellentesque gravida bibendum. Sed feugiat malesuada libero. Etiam malesuada, est vel tempor porttitor, lectus augue condimentum est, id mattis nunc ante eget diam.&lt;/p&gt;
       
     </content>
   </entry>
