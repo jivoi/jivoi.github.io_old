@@ -5,3 +5,5 @@ pygments: true
 
 author: Jivoi
 author_link: http://yajivoi.com
+
+exclude: ['Rakefile', 'README.markdown','README.textile', '_design']
