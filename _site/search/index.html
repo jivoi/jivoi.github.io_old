@@ -37,7 +37,9 @@
               <a href="/contact">Контакты</a>
             </li>
             <li>
-              <form action="/search/" method="get">
+              <form action="/search/" method="get" action="http://www.google.com/search">
+                <input type="text" id="search" class="ti" name="q" value="" />
+                <input type="hidden" name="q" value="site:yajivoi.com" />
                 <input type="search" name="query" placeholder="Поиск"/>
               </form>
             </li>
