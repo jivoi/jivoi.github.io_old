@@ -103,7 +103,6 @@ div#container
 
 div#content img, div#content object
 {
-  text-align:center;
   -moz-border-radius:5px;
   -moz-box-shadow:0 1px 0 #fff;
   -webkit-border-radius:5px;
