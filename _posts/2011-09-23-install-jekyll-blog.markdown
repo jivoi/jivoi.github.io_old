@@ -11,6 +11,7 @@ tags:
 **Команды:** 
 
 {% highlight bash %}
+sudo pacman -S git
 bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
 rvm install 1.9.2
 gem install jekyll
@@ -28,3 +29,7 @@ rake deploy
 Полезные ссылки:
 
 [https://github.com/mojombo/jekyll/wiki] (https://github.com/mojombo/jekyll/wiki)
+[http://klen.github.com/github-blog-ru.html](http://klen.github.com/github-blog-ru.html)
+[http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/](http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/)
+[http://pyobject.ru/blog/2010/04/15/static-blog-generators/](http://pyobject.ru/blog/2010/04/15/static-blog-generators/)
+[http://habrahabr.ru/blogs/webdev/93499/](http://habrahabr.ru/blogs/webdev/93499/)
