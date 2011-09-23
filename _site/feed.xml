@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-09-23T13:03:12+04:00</updated>
+  <updated>2011-09-23T13:05:44+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -42,6 +42,7 @@
         &lt;p&gt;Небольшое руководства как запустить блог на github.com и jekyll.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Команды:&lt;/b&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;bash &amp;lt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;curl -s https://rvm.beginrescueend.com/install/rvm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+rvm install 1.9.2
 gem install jekyll
 gem install RedCloth
 easy_install Pygments
