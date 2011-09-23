@@ -2,7 +2,9 @@
 title: Используем Jekyll + Github для блога 
 layout: post
 excerpt: Небольшое руководства как запустить блог на github.com и jekyll
-categories: jekyll
+syntax-highlighting: yes
+tags:
+- jekyll
 ---
 Небольшое руководства как запустить блог на github.com и jekyll.
 
@@ -24,4 +26,4 @@ rake deploy
 {% endhighlight %}
 
 Полезные ссылки:
-https://github.com/mojombo/jekyll/wiki
+[1]: https://github.com/mojombo/jekyll/wiki
