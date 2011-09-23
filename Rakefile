@@ -3,10 +3,14 @@ def jekyll(opts = '')
     sh 'jekyll ' + opts
 end
 
-
 desc "Build site using Jekyll"
 task :build do
     jekyll
+end
+
+desc 'Build and start server with --auto'
+task :server do
+    jekyll '--server --auto'
 end
 
 desc 'Build and deploy'

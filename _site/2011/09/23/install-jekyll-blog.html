@@ -4,9 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=550, maximum-scale=1.0" />
   <meta name="keywords" content="jivoi, yajivoi.com, jivoi.github.com" />
-  <meta name="description" content="Я Живой; IT Заметки. Москва.." />
+  <meta name="description" content="Небольшое руководства как запустить блог на github.com и jekyll" />
   <title>
-     Я Живой. Блог
+    Используем Jekyll + Github для блога -  Я Живой. Блог
   </title>
   <link rel="stylesheet" href="/css/reset.css" type="text/css" />
   
@@ -26,7 +26,7 @@
         <div id="header">
           <h1>
             
-             Я Живой.Блог
+              <a href="/">&larr;Главная</a>
             
           </h1>
           <ul>
@@ -45,76 +45,84 @@
           </ul>
           <hr class="right"/>
         </div>
-        <h2></h2>
+        <h2>Используем Jekyll + Github для блога</h2>
         
-  <div class="post">
-    <h3>
-    
-        <a href="/2011/09/23/ski-ost.html">Саундтреки из Лыжных фильмов</a>
-      
-    </h3>
-    <p class="date">23 Sep 2011
-      
-    </p>
-    <p>
-      Спешу поделится с вами небольшой но постоянно растущей коллекцией саундреков из лыжных фильмов. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.
-      
-    </p>
-<a href="/2011/09/23/ski-ost.html">[Читать полностью]</a>
-  </div>
 
-  <div class="post">
-    <h3>
-    
-        <a href="/2011/09/23/install-jekyll-blog.html">Используем Jekyll + Github для блога</a>
-      
-    </h3>
-    <p class="date">23 Sep 2011
-      
-    </p>
-    <p>
-      Небольшое руководства как запустить блог на github.com и jekyll
-      
-    </p>
-<a href="/2011/09/23/install-jekyll-blog.html">[Читать полностью]</a>
-  </div>
-
-  <div class="post">
-    <h3>
-    
-        <a href="/2011/09/22/mtb-ost.html">MTB саундтреки</a>
-      
-    </h3>
-    <p class="date">22 Sep 2011
-      
-    </p>
-    <p>
-      Немного саундтреков для любителей MTB. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.
-      
-    </p>
-<a href="/2011/09/22/mtb-ost.html">[Читать полностью]</a>
-  </div>
-
-  <div class="post">
-    <h3>
-    
-        <a href="/2011/09/21/snowboard-ost.html">Сноуборд саундтреки</a>
-      
-    </h3>
-    <p class="date">21 Sep 2011
-      
-    </p>
-    <p>
-      Достаточно давно я собираю саундтреки(OST) из Сноуборд видео и из года в год их все больше и больше и теперь я хочу поделится ими с вами. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях. Check It!
-      
-    </p>
-<a href="/2011/09/21/snowboard-ost.html">[Читать полностью]</a>
-  </div>
-
-
-<p id="footnote">
-  Ничего не нашлось? Посмотрите в <a href="/archive">Архиве</a>.
+<p class="article_date date">
+  23 Sep 2011
 </p>
+
+<span class="article_buttons">
+  <a class="tweet" target="_blank">
+    <span class="balloon">Твит!</span> <img src="/images/tweet.png"/>
+  </a>
+  <a href="http://feeds.feedburner.com/yajivoi">
+    <span class="balloon">Подпишись!</span> <img src="/images/feed.png"/>
+  </a>
+</span>
+
+<hr/>
+
+<div id="content">
+	<p>Небольшое руководства как запустить блог на github.com и jekyll.</p>
+<p><b>Команды:</b></p>
+<div class="highlight"><pre><code class="bash">bash &lt; &lt;<span class="o">(</span>curl -s https://rvm.beginrescueend.com/install/rvm<span class="o">)</span>
+gem install jekyll
+gem install RedCloth
+easy_install Pygments
+git config --global user.name <span class="s2">&quot;user&quot;</span>
+git config --global user.email mail@gmail.com
+mkdir blog
+<span class="nb">cd </span>blog
+git clone git@github.com:jivoi/jivoi.github.com.git
+rake post
+rake deploy
+</code></pre>
+</div>
+<p>Полезные ссылки:<br />
+https://github.com/mojombo/jekyll/wiki</p>
+</div>
+
+<span class="article_buttons">
+  <a class="tweet" target="_blank">
+    <span class="balloon">Твит!</span> <img src="/images/tweet.png"/>
+  </a>
+  <a href="http://feeds.feedburner.com/yajivoi">
+    <span class="balloon">Подпишись!</span> <img src="/images/feed.png"/>
+  </a>
+</span>
+
+<hr/>
+
+<div id="related">
+    <h3>Другие Посты</h3>
+    <ul class="posts">
+        
+            <li><span>23 Sep 2011</span>
+            -
+            <a href="/2011/09/23/ski-ost.html">Саундтреки из Лыжных фильмов</a></li>
+        
+            <li><span>22 Sep 2011</span>
+            -
+            <a href="/2011/09/22/mtb-ost.html">MTB саундтреки</a></li>
+        
+            <li><span>21 Sep 2011</span>
+            -
+            <a href="/2011/09/21/snowboard-ost.html">Сноуборд саундтреки</a></li>
+        
+    </ul>
+</div>
+
+<!--//disqus.com comments-->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'httpjivoigithubcom'; // required: replace example with your forum shortname
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
 
       </div>
     </div>

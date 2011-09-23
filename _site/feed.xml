@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-09-23T12:51:04+04:00</updated>
+  <updated>2011-09-23T13:03:12+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -25,6 +25,37 @@
 &lt;p&gt;Спешу поделится с вами небольшой но постоянно растущей коллекцией саундреков из лыжных фильмов. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Список&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;Здесь будут ссылки. Немного терпения =)&lt;/p&gt;
+      
+    </content>
+  </entry>
+  
+  <entry>
+    <title type="html">Используем Jekyll + Github для блога</title>
+    
+      <link href="http://jivoi.github.com/2011/09/23/install-jekyll-blog.html"/>
+    
+    <id>http://jivoi.github.com/2011/09/23/install-jekyll-blog.html</id>
+    <updated>2011-09-23T00:00:00+04:00</updated>
+    <summary>Небольшое руководства как запустить блог на github.com и jekyll</summary>
+    <content type="html">
+      
+        &lt;p&gt;Небольшое руководства как запустить блог на github.com и jekyll.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Команды:&lt;/b&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;bash &amp;lt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;curl -s https://rvm.beginrescueend.com/install/rvm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+gem install jekyll
+gem install RedCloth
+easy_install Pygments
+git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;user&amp;quot;&lt;/span&gt;
+git config --global user.email mail@gmail.com
+mkdir blog
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blog
+git clone git@github.com:jivoi/jivoi.github.com.git
+rake post
+rake deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Полезные ссылки:&lt;br /&gt;
+https://github.com/mojombo/jekyll/wiki&lt;/p&gt;
       
     </content>
   </entry>
