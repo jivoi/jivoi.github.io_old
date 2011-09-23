@@ -35,6 +35,7 @@ task :post do
 title: #{title}
 layout: post
 excerpt:
+categories:
 ---
 <p><img src='http://jivoi.github.com/images/blog/.jpg' alt='' /></p>
 
