@@ -27,4 +27,4 @@ rake deploy
 
 Полезные ссылки:
 
-( https://github.com/mojombo/jekyll/wiki )
+[Текст ссылки] (https://github.com/mojombo/jekyll/wiki)
