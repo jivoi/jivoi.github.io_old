@@ -35,9 +35,12 @@ task :post do
 title: #{title}
 layout: post
 excerpt:
-categories:
+tags:
+- 
 ---
 <p><img src='http://jivoi.github.com/images/blog/.jpg' alt='' /></p>
+
+![Alt-text](URL "Img Title")
 
 {% highlight bash %}
 test
@@ -45,5 +48,5 @@ test
 
     EOF
   end
-  puts "Created '_posts/#{time}-#{name}.textile'"
+  puts "Created '_posts/#{time}-#{name}.markdown'"
 end

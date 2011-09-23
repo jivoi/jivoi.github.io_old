@@ -2,7 +2,8 @@
 layout: post
 title: MTB саундтреки
 excerpt: Немного саундтреков для любителей MTB. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.
-categories: ost
+tags: 
+- ost
 ---
 
 <p><img src='http://jivoi.github.com/images/blog/mtb.jpg' alt='mtb' /></p>
