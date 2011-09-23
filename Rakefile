@@ -1,3 +1,23 @@
+def jekyll(opts = '')
+    sh 'rm -rf _site'
+    sh 'jekyll ' + opts
+end
+
+
+desc "Build site using Jekyll"
+task :build do
+    jekyll
+end
+
+desc 'Build and deploy'
+task :deploy => :build do
+    sh 'jekyll --pygments'
+    sh 'git add .'
+    sh 'git commit -m "blog"'
+    sh 'git push -u origin master'
+end
+
+
 desc "Create a new blog post"
 task :post do
   print "Please enter in the title of the blog post: "
