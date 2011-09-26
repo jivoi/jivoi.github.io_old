@@ -6,7 +6,7 @@ syntax-highlighting: yes
 tags:
 - jekyll
 ---
-Небольшое руководства как запустить блог на github.com и jekyll.
+Небольшое руководство как запустить блог на github.com и jekyll.
 
 **Команды:** 
 
@@ -28,13 +28,9 @@ rake deploy
 
 Полезные ссылки:
 
-[https://github.com/mojombo/jekyll/wiki] (https://github.com/mojombo/jekyll/wiki)
-
-[http://klen.github.com/github-blog-ru.html](http://klen.github.com/github-blog-ru.html)
-
-[http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/](http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/)
-
-[http://pyobject.ru/blog/2010/04/15/static-blog-generators/](http://pyobject.ru/blog/2010/04/15/static-blog-generators/)
-
-[http://habrahabr.ru/blogs/webdev/93499/](http://habrahabr.ru/blogs/webdev/93499/)
+[https://github.com/mojombo/jekyll/wiki] (https://github.com/mojombo/jekyll/wiki) <br/>
+[http://klen.github.com/github-blog-ru.html](http://klen.github.com/github-blog-ru.html) <br/>
+[http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/](http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/) <br/>
+[http://pyobject.ru/blog/2010/04/15/static-blog-generators/](http://pyobject.ru/blog/2010/04/15/static-blog-generators/) <br/>
+[http://habrahabr.ru/blogs/webdev/93499/](http://habrahabr.ru/blogs/webdev/93499/) <br/>
 
