@@ -1,7 +1,7 @@
 --- 
 title: Используем Jekyll + Github для блога 
 layout: post
-excerpt: Небольшое руководства как запустить блог на github.com и jekyll
+excerpt: Небольшое руководство как запустить блог на github.com и jekyll
 syntax-highlighting: yes
 tags:
 - jekyll
