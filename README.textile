@@ -4,3 +4,10 @@ h1. jivoi.github.com
 
 Хотите себе такой же блог? ["Вот руководство!":http://yajivoi.com/2011/09/23/install-jekyll-blog.html]
 
+-----BEGIN GEEK CODE BLOCK-----
+Version: 3.1
+GCS/IT/L/MU/O d-()>+$ s+(++):++ a- C(+)>++ UBLC(++++)>+++ P(+)>++
+L++(+++)>++ E(---)>--- W++(+++)>+++ N o K-- w-->--- O M V PS+(+++)>+++
+PE+(++)>+++ Y+ PGP+(++)>+++ t 5 X+ R(-)>-- tv--(--)>-- b++(+++) DI D+(+)>+
+G e+++(++++)>++++ h r(+)>+ y+(+)>+
+------END GEEK CODE BLOCK------
