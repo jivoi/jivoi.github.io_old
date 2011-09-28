@@ -15,7 +15,7 @@ tags:
 Ставить будем на x64, но все это также будет работать и на i386.
 Поехали.
 
-**Chef-Client**
+**Chef-Client:**
 
 +# Ставим нужные пакеты+
 
@@ -55,7 +55,7 @@ $IPT -A INPUT -p tcp --dport 8983 -j ACCEPT
 # data store (couchdb)
 $IPT -A INPUT -p tcp --dport 5984 -j ACCEPT
 
-**Chef-Server**
+**Chef-Server:**
 
 +# Ставим нужные пакеты+
 

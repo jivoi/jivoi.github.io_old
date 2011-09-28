@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-09-28T16:52:21+04:00</updated>
+  <updated>2011-09-28T16:55:35+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -26,7 +26,7 @@
 &lt;p&gt;Набор команд которые нужно выполнть чтобы все заработал на CentOS 6.&lt;br /&gt;
 Ставить будем на x64, но все это также будет работать и на i386.&lt;br /&gt;
 Поехали.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Chef-Client&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Chef-Client:&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;&lt;ins&gt;# Ставим нужные пакеты&lt;/ins&gt;&lt;/p&gt;
 &lt;p&gt;rpm -Uvh http://rbel.co/rbel6&lt;br /&gt;
 yum install rubygem-chef&lt;/p&gt;
@@ -58,7 +58,7 @@ $&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt; -A &lt;span class=&quot;cap
 	&lt;li&gt;data store (couchdb)&lt;br /&gt;
 $&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt; -A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 5984 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;b&gt;Chef-Server&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Chef-Server:&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;&lt;ins&gt;# Ставим нужные пакеты&lt;/ins&gt;&lt;/p&gt;
 &lt;p&gt;rpm -Uvh http://rbel.co/rbel6&lt;br /&gt;
 yum install rubygem-chef-server&lt;/p&gt;
