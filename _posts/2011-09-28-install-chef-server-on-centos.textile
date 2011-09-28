@@ -15,7 +15,6 @@ tags:
 Ставить будем на x64, но все это также будет работать и на i386 
 
 **Chef-Client**
-{% highlight bash %}
 # Ставим нужные пакеты
 
 rpm -Uvh http://rbel.co/rbel6
@@ -54,11 +53,9 @@ $IPT -A INPUT -p tcp --dport 8983 -j ACCEPT
 # data store (couchdb)
 $IPT -A INPUT -p tcp --dport 5984 -j ACCEPT
 
-{% endhighlight %}
 
 **Chef-Server**
 
-{% highlight bash %}
 # Ставим нужные пакеты
 
 rpm -Uvh http://rbel.co/rbel6
@@ -98,8 +95,6 @@ knife configure -i
 Смотрим в админку
 
 http://your-chef-server:4040
-
-{% endhighlight %}
 
 **Полезные ссылки**
 
