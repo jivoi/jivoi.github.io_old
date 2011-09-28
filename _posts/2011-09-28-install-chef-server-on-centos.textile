@@ -16,6 +16,7 @@ tags:
 Поехали.
 
 **Chef-Client**
+{% highlight bash %}
 # Ставим нужные пакеты
 
 rpm -Uvh http://rbel.co/rbel6
@@ -54,6 +55,7 @@ $IPT -A INPUT -p tcp --dport 8983 -j ACCEPT
 # data store (couchdb)
 $IPT -A INPUT -p tcp --dport 5984 -j ACCEPT
 
+{% endhighlight %}
 
 **Chef-Server**
 
