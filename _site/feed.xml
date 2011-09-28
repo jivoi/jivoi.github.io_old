@@ -4,12 +4,95 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-09-28T14:49:54+04:00</updated>
+  <updated>2011-09-28T16:34:49+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
   </author>
 
+  
+  <entry>
+    <title type="html">Устанавливаем Chef-Server и Chef-Client на CentOS 6</title>
+    
+      <link href="http://jivoi.github.com/2011/09/28/install-chef-server-on-centos.html"/>
+    
+    <id>http://jivoi.github.com/2011/09/28/install-chef-server-on-centos.html</id>
+    <updated>2011-09-28T00:00:00+04:00</updated>
+    <summary>Набор команд которые нужно выполнть чтобы все заработал на CentOS 6</summary>
+    <content type="html">
+      
+        &lt;p&gt;&lt;img src='http://jivoi.github.com/images/blog/chef.jpg' alt='' /&gt;&lt;/p&gt;
+&lt;p&gt;Если кто не знает Chef &amp;#8211; это &lt;span class=&quot;caps&quot;&gt;CMT&lt;/span&gt; (configuration management tool) написано на ruby.&lt;/p&gt;
+&lt;p&gt;Набор команд которые нужно выполнть чтобы все заработал на CentOS 6&lt;br /&gt;
+Ставить будем на x64, но все это также будет работать и на i386&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Chef-Client&lt;/b&gt;&lt;br /&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Ставим нужные пакеты&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&amp;lt;span class=&quot;c&quot;&amp;gt;# Ставим нужные пакеты&amp;lt;/span&amp;gt;&lt;/p&gt;
+&lt;p&gt;rpm -Uvh http://rbel.co/rbel6&lt;br /&gt;
+yum install rubygem-chef&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;c&quot;&gt;# Настраиваем клиента&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;cat &amp;gt; /etc/chef/client.rb &lt;span class=&quot;s&quot;&gt;&amp;lt;&amp;lt;-&lt;span class=&quot;caps&quot;&gt;EOF&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;s&quot;&gt;log_level                :info&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;log_location             &lt;span class=&quot;caps&quot;&gt;STDOUT&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;node_name                &amp;#39;node.test.ru&amp;#39;&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;client_key               &amp;#39;/etc/chef/client.pem&amp;#39;&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;interval                &amp;#39;300&amp;#39;   &lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;validation_client_name   &amp;#39;chef-validator&amp;#39;&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;validation_key           &amp;#39;/etc/chef/validation.pem&amp;#39;&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;chef_server_url          &amp;#39;http://servers.test.ru:4000&amp;#39;&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;cache_type               &amp;#39;BasicFile&amp;#39;&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;s&quot;&gt;cache_options( :path =&amp;gt; &amp;#39;/etc/chef/checksums&amp;#39; )&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;caps&quot;&gt;EOF&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;запускать /etc/init.d/chef-client только после установки Chef-Server!&lt;/p&gt;
+&lt;p&gt;Правим iptables&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;c&quot;&gt;# Chef&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# &amp;#8212; web interface&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; &lt;del&gt;A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 4040 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# -&lt;/del&gt; chef-server&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; &lt;del&gt;A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 4000 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# -&lt;/del&gt; amqp server&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; &lt;del&gt;A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp -m multiport &amp;#8212;dport 5672,4369,50229 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# -&lt;/del&gt; search indexes (solr)&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; -A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 8983 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# data store (couchdb)&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; -A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 5984 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/notextile&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Chef-Server&lt;/b&gt;&lt;br /&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Ставим нужные пакеты&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&amp;lt;span class=&quot;c&quot;&amp;gt;# Ставим нужные пакеты&amp;lt;/span&amp;gt;&lt;/p&gt;
+&lt;p&gt;rpm -Uvh http://rbel.co/rbel6&lt;br /&gt;
+yum install rubygem-chef-server&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;c&quot;&gt;# Запускаем скрипт настройки&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;setup-chef-server.sh&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;c&quot;&gt;# Правим iptables&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;c&quot;&gt;# Chef&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# &amp;#8212; web interface&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; &lt;del&gt;A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 4040 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# -&lt;/del&gt; chef-server&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; &lt;del&gt;A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 4000 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# -&lt;/del&gt; amqp server&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; &lt;del&gt;A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp -m multiport &amp;#8212;dport 5672,4369,50229 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# -&lt;/del&gt; search indexes (solr)&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; -A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 8983 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;c&quot;&gt;# data store (couchdb)&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;nv&quot;&gt;$&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt;&lt;/span&gt; -A &lt;span class=&quot;caps&quot;&gt;INPUT&lt;/span&gt; -p tcp &amp;#8212;dport 5984 -j &lt;span class=&quot;caps&quot;&gt;ACCEPT&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;c&quot;&gt;# Перезапускам демонов&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;/etc/init.d/chef-server restart&lt;br /&gt;
+/etc/init.d/chef-server-webui restart&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;c&quot;&gt;# Копируем приватный ключи на клиент машину&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;scp /etc/chef/validation.pem login@client.test.ru:/etc/chef/validation.pem&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;c&quot;&gt;# Настраиваем knife&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;knife configure -i&lt;/p&gt;
+&lt;p&gt;Смотрим в админку&lt;/p&gt;
+&lt;p&gt;http://your-chef-server:4040&lt;br /&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/notextile&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Полезные ссылки&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://wiki.opscode.com/display/chef/Home&quot;&gt;Opscode Open Source Wiki&lt;/a&gt;&lt;/p&gt;
+      
+    </content>
+  </entry>
   
   <entry>
     <title type="html">Саундтреки из Лыжных фильмов</title>

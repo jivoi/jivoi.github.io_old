@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=550, maximum-scale=1.0" />
+  <meta name="keywords" content="jivoi, yajivoi.com, jivoi.github.com" />
+  <meta name="description" content="Набор команд которые нужно выполнть чтобы все заработал на CentOS 6" />
+  <title>
+    Устанавливаем Chef-Server и Chef-Client на CentOS 6 -  Я Живой. Блог
+  </title>
+  <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+  
+  <link rel="stylesheet" href="/css/screen.css" type="text/css" />
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="/css/iphone.css" type="text/css" />
+  <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="/css/ipad.css" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/yajivoi" />
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="/images/icon.jpg" rel="apple-touch-icon" />
+  <script src="/js/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="outer">
+    <div id="wrapper">
+      <div id="container">
+        <div id="header">
+          <h1>
+            
+              <a href="/">&larr;Главная</a>
+            
+          </h1>
+          <ul>
+            <li>
+              <a href="/archive">Архив</a>
+            </li>
+            <li>
+              <a href="/contact">Контакты</a>
+            </li>
+            <li>
+              <form  method="get" action="http://www.google.com/search">
+                <input type="text" id="search" class="ti" name="q" value="" placeholder="Поиск"/>
+                <input type="hidden" name="q" value="site:yajivoi.com" placeholder="Поиск"/>
+              </form>
+            </li>
+          </ul>
+          <hr class="right"/>
+        </div>
+        <h2>Устанавливаем Chef-Server и Chef-Client на CentOS 6</h2>
+        
+
+<p class="article_date date">
+  28 Sep 2011
+</p>
+
+<span class="article_buttons">
+  <a class="tweet" target="_blank">
+    <span class="balloon">Твит!</span> <img src="/images/tweet.png"/>
+  </a>
+  <a href="http://feeds.feedburner.com/yajivoi">
+    <span class="balloon">Подпишись!</span> <img src="/images/feed.png"/>
+  </a>
+</span>
+
+<hr/>
+
+<div id="content">
+	<p><img src='http://jivoi.github.com/images/blog/chef.jpg' alt='' /></p>
+<p>Если кто не знает Chef &#8211; это <span class="caps">CMT</span> (configuration management tool) написано на ruby.</p>
+<p>Набор команд которые нужно выполнть чтобы все заработал на CentOS 6<br />
+Ставить будем на x64, но все это также будет работать и на i386</p>
+<p><b>Chef-Client</b><br />
+<div class="highlight"><pre><code class="bash"><span class="c"># Ставим нужные пакеты<div class="highlight"><pre><code class="bash">&lt;span class="c"&gt;# Ставим нужные пакеты&lt;/span&gt;</p>
+<p>rpm -Uvh http://rbel.co/rbel6<br />
+yum install rubygem-chef</p>
+<p><span class="c"># Настраиваем клиента</span></p>
+<p>cat &gt; /etc/chef/client.rb <span class="s">&lt;&lt;-<span class="caps">EOF</span></span></p>
+<p><span class="s">log_level                :info</span><br />
+<span class="s">log_location             <span class="caps">STDOUT</span></span><br />
+<span class="s">node_name                &#39;node.test.ru&#39;</span><br />
+<span class="s">client_key               &#39;/etc/chef/client.pem&#39;</span><br />
+<span class="s">interval                &#39;300&#39;   </span><br />
+<span class="s">validation_client_name   &#39;chef-validator&#39;</span><br />
+<span class="s">validation_key           &#39;/etc/chef/validation.pem&#39;</span><br />
+<span class="s">chef_server_url          &#39;http://servers.test.ru:4000&#39;</span><br />
+<span class="s">cache_type               &#39;BasicFile&#39;</span><br />
+<span class="s">cache_options( :path =&gt; &#39;/etc/chef/checksums&#39; )</span></p>
+<p><span class="s"><span class="caps">EOF</span></span></p>
+<p>запускать /etc/init.d/chef-client только после установки Chef-Server!</p>
+<p>Правим iptables</p>
+<p><span class="c"># Chef</span><br />
+<span class="c"># &#8212; web interface</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp &#8212;dport 4040 -j <span class="caps">ACCEPT</span><br />
+<span class="c"># -</del> chef-server</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp &#8212;dport 4000 -j <span class="caps">ACCEPT</span><br />
+<span class="c"># -</del> amqp server</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp -m multiport &#8212;dport 5672,4369,50229 -j <span class="caps">ACCEPT</span><br />
+<span class="c"># -</del> search indexes (solr)</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> -A <span class="caps">INPUT</span> -p tcp &#8212;dport 8983 -j <span class="caps">ACCEPT</span><br />
+<span class="c"># data store (couchdb)</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> -A <span class="caps">INPUT</span> -p tcp &#8212;dport 5984 -j <span class="caps">ACCEPT</span><br />
+</code></pre></p>
+</div>
+<p></notextile></p>
+<p><b>Chef-Server</b><br />
+<div class="highlight"><pre><code class="bash"><span class="c"># Ставим нужные пакеты<div class="highlight"><pre><code class="bash">&lt;span class="c"&gt;# Ставим нужные пакеты&lt;/span&gt;</p>
+<p>rpm -Uvh http://rbel.co/rbel6<br />
+yum install rubygem-chef-server</p>
+<p><span class="c"># Запускаем скрипт настройки</span></p>
+<p>setup-chef-server.sh</p>
+<p><span class="c"># Правим iptables</span></p>
+<p><span class="c"># Chef</span><br />
+<span class="c"># &#8212; web interface</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp &#8212;dport 4040 -j <span class="caps">ACCEPT</span><br />
+<span class="c"># -</del> chef-server</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp &#8212;dport 4000 -j <span class="caps">ACCEPT</span><br />
+<span class="c"># -</del> amqp server</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp -m multiport &#8212;dport 5672,4369,50229 -j <span class="caps">ACCEPT</span><br />
+<span class="c"># -</del> search indexes (solr)</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> -A <span class="caps">INPUT</span> -p tcp &#8212;dport 8983 -j <span class="caps">ACCEPT</span><br />
+<span class="c"># data store (couchdb)</span><br />
+<span class="nv">$<span class="caps">IPT</span></span> -A <span class="caps">INPUT</span> -p tcp &#8212;dport 5984 -j <span class="caps">ACCEPT</span></p>
+<p><span class="c"># Перезапускам демонов</span></p>
+<p>/etc/init.d/chef-server restart<br />
+/etc/init.d/chef-server-webui restart</p>
+<p><span class="c"># Копируем приватный ключи на клиент машину</span></p>
+<p>scp /etc/chef/validation.pem login@client.test.ru:/etc/chef/validation.pem</p>
+<p><span class="c"># Настраиваем knife</span></p>
+<p>knife configure -i</p>
+<p>Смотрим в админку</p>
+<p>http://your-chef-server:4040<br />
+</code></pre></p>
+</div>
+<p></notextile></p>
+<p><b>Полезные ссылки</b></p>
+<p><a href="http://wiki.opscode.com/display/chef/Home">Opscode Open Source Wiki</a></p>
+</div>
+
+<span class="article_buttons">
+  <a class="tweet" target="_blank">
+    <span class="balloon">Твит!</span> <img src="/images/tweet.png"/>
+  </a>
+  <a href="http://feeds.feedburner.com/yajivoi">
+    <span class="balloon">Подпишись!</span> <img src="/images/feed.png"/>
+  </a>
+</span>
+
+<hr/>
+
+<div id="related">
+    <h3>Другие Посты</h3>
+    <ul class="posts">
+        
+            <li><span>23 Sep 2011</span>
+            -
+            <a href="/2011/09/23/ski-ost.html">Саундтреки из Лыжных фильмов</a></li>
+        
+            <li><span>23 Sep 2011</span>
+            -
+            <a href="/2011/09/23/install-jekyll-blog.html">Используем Jekyll + Github для блога</a></li>
+        
+            <li><span>22 Sep 2011</span>
+            -
+            <a href="/2011/09/22/mtb-ost.html">MTB саундтреки</a></li>
+        
+    </ul>
+</div>
+
+<!--//disqus.com comments-->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'httpjivoigithubcom'; // required: replace example with your forum shortname
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+      </div>
+    </div>
+  </div>
+
+<!--//fork me banner-->
+<a href="http://github.com/jivoi"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/4c7dc970b89fd04b81c8e221ba88ff99a06c6b61/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" /></a>
+
+<!--//google analitics-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10178897-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter631012 = new Ya.Metrika({id:631012});}
+catch(e) { }
+</script></div>
+<noscript><div><img src="//mc.yandex.ru/watch/631012" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!--//disqus.com counter-->
+<script type="text/javascript">
+    var disqus_shortname = 'httpjivoigithubcom';
+    (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'http://disqus.com/forums/httpjivoigithubcom/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script>
+
+<script stype="text/javascript">
+    $('.tweet').attr('href', 'http://twitter.com/share?url=' + escape(document.location) + '&via=jivoi&text=' + escape(document.title.split(' - ')[0]));
+</script>
+
+</body>
+</html>
