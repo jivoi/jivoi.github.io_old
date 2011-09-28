@@ -64,7 +64,7 @@
 <hr/>
 
 <div id="content">
-	<p><img src='http://jivoi.github.com/images/blog/chef.jpg' alt='' /></p>
+	<p><img src='http://jivoi.github.com/images/blog/chef.jpg' alt='chef' /></p>
 <p>Если кто не знает Chef &#8211; это <span class="caps">CMT</span> (configuration management tool) написано на ruby.</p>
 <p>Набор команд которые нужно выполнть чтобы все заработал на CentOS 6<br />
 Ставить будем на x64, но все это также будет работать и на i386</p>
@@ -101,36 +101,48 @@ yum install rubygem-chef</p>
 </code></pre></p>
 </div>
 <p></notextile></p>
-<p><b>Chef-Server</b><br />
-<div class="highlight"><pre><code class="bash"><span class="c"># Ставим нужные пакеты<div class="highlight"><pre><code class="bash">&lt;span class="c"&gt;# Ставим нужные пакеты&lt;/span&gt;</p>
-<p>rpm -Uvh http://rbel.co/rbel6<br />
-yum install rubygem-chef-server</p>
-<p><span class="c"># Запускаем скрипт настройки</span></p>
-<p>setup-chef-server.sh</p>
-<p><span class="c"># Правим iptables</span></p>
-<p><span class="c"># Chef</span><br />
-<span class="c"># &#8212; web interface</span><br />
-<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp &#8212;dport 4040 -j <span class="caps">ACCEPT</span><br />
-<span class="c"># -</del> chef-server</span><br />
-<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp &#8212;dport 4000 -j <span class="caps">ACCEPT</span><br />
-<span class="c"># -</del> amqp server</span><br />
-<span class="nv">$<span class="caps">IPT</span></span> <del>A <span class="caps">INPUT</span> -p tcp -m multiport &#8212;dport 5672,4369,50229 -j <span class="caps">ACCEPT</span><br />
-<span class="c"># -</del> search indexes (solr)</span><br />
-<span class="nv">$<span class="caps">IPT</span></span> -A <span class="caps">INPUT</span> -p tcp &#8212;dport 8983 -j <span class="caps">ACCEPT</span><br />
-<span class="c"># data store (couchdb)</span><br />
-<span class="nv">$<span class="caps">IPT</span></span> -A <span class="caps">INPUT</span> -p tcp &#8212;dport 5984 -j <span class="caps">ACCEPT</span></p>
-<p><span class="c"># Перезапускам демонов</span></p>
-<p>/etc/init.d/chef-server restart<br />
-/etc/init.d/chef-server-webui restart</p>
-<p><span class="c"># Копируем приватный ключи на клиент машину</span></p>
-<p>scp /etc/chef/validation.pem login@client.test.ru:/etc/chef/validation.pem</p>
-<p><span class="c"># Настраиваем knife</span></p>
-<p>knife configure -i</p>
-<p>Смотрим в админку</p>
-<p>http://your-chef-server:4040<br />
-</code></pre></p>
+<p><b>Chef-Server</b></p>
+<div class="highlight"><pre><code class="bash"><span class="c"># Ставим нужные пакеты</span>
+
+rpm -Uvh http://rbel.co/rbel6
+yum install rubygem-chef-server
+
+<span class="c"># Запускаем скрипт настройки</span>
+
+setup-chef-server.sh
+
+<span class="c"># Правим iptables</span>
+
+<span class="c"># Chef</span>
+<span class="c"># -- web interface</span>
+<span class="nv">$IPT</span> -A INPUT -p tcp --dport 4040 -j ACCEPT
+<span class="c"># -- chef-server</span>
+<span class="nv">$IPT</span> -A INPUT -p tcp --dport 4000 -j ACCEPT
+<span class="c"># -- amqp server</span>
+<span class="nv">$IPT</span> -A INPUT -p tcp -m multiport --dport 5672,4369,50229 -j ACCEPT
+<span class="c"># -- search indexes (solr)</span>
+<span class="nv">$IPT</span> -A INPUT -p tcp --dport 8983 -j ACCEPT
+<span class="c"># data store (couchdb)</span>
+<span class="nv">$IPT</span> -A INPUT -p tcp --dport 5984 -j ACCEPT
+
+<span class="c"># Перезапускам демонов</span>
+
+/etc/init.d/chef-server restart
+/etc/init.d/chef-server-webui restart
+
+<span class="c"># Копируем приватный ключи на клиент машину</span>
+
+scp /etc/chef/validation.pem login@client.test.ru:/etc/chef/validation.pem
+
+<span class="c"># Настраиваем knife</span>
+
+knife configure -i
+
+Смотрим в админку
+
+http://your-chef-server:4040
+</code></pre>
 </div>
-<p></notextile></p>
 <p><b>Полезные ссылки</b></p>
 <p><a href="http://wiki.opscode.com/display/chef/Home">Opscode Open Source Wiki</a></p>
 </div>

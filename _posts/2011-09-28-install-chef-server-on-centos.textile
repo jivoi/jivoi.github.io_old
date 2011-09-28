@@ -7,7 +7,7 @@ tags:
  -chef-server 
  -chef-client
 ---
-<p><img src='http://jivoi.github.com/images/blog/chef.jpg' alt='' /></p>
+<p><img src='http://jivoi.github.com/images/blog/chef.jpg' alt='chef' /></p>
 
 Если кто не знает Chef - это CMT (configuration management tool) написано на ruby.
 
@@ -57,6 +57,7 @@ $IPT -A INPUT -p tcp --dport 5984 -j ACCEPT
 {% endhighlight %}
 
 **Chef-Server**
+
 {% highlight bash %}
 # Ставим нужные пакеты
 
