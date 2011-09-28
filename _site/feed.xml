@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-09-28T16:43:36+04:00</updated>
+  <updated>2011-09-28T16:45:07+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -22,9 +22,10 @@
     <content type="html">
       
         &lt;p&gt;&lt;img src='http://jivoi.github.com/images/blog/chef.jpg' alt='chef' /&gt;&lt;/p&gt;
-&lt;p&gt;Если кто не знает Chef &amp;#8211; это &lt;span class=&quot;caps&quot;&gt;CMT&lt;/span&gt; (configuration management tool) написано на ruby.&lt;/p&gt;
-&lt;p&gt;Набор команд которые нужно выполнть чтобы все заработал на CentOS 6&lt;br /&gt;
-Ставить будем на x64, но все это также будет работать и на i386&lt;/p&gt;
+&lt;p&gt;Если кто не знает Chef &amp;#8211; это &lt;span class=&quot;caps&quot;&gt;CMT&lt;/span&gt; (configuration management tool) написан на ruby.&lt;/p&gt;
+&lt;p&gt;Набор команд которые нужно выполнть чтобы все заработал на CentOS 6.&lt;br /&gt;
+Ставить будем на x64, но все это также будет работать и на i386.&lt;br /&gt;
+Поехали.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Chef-Client&lt;/b&gt;&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Ставим нужные пакеты&lt;/li&gt;

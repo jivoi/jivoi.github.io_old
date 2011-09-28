@@ -4,15 +4,16 @@ layout: post
 syntax-highlighting: yes
 excerpt: Набор команд которые нужно выполнть чтобы все заработал на CentOS 6
 tags:
- -chef-server 
- -chef-client
+- chef-server 
+- chef-client
 ---
 <p><img src='http://jivoi.github.com/images/blog/chef.jpg' alt='chef' /></p>
 
-Если кто не знает Chef - это CMT (configuration management tool) написано на ruby.
+Если кто не знает Chef - это CMT (configuration management tool) написан на ruby.
 
-Набор команд которые нужно выполнть чтобы все заработал на CentOS 6
-Ставить будем на x64, но все это также будет работать и на i386 
+Набор команд которые нужно выполнть чтобы все заработал на CentOS 6.
+Ставить будем на x64, но все это также будет работать и на i386.
+Поехали.
 
 **Chef-Client**
 # Ставим нужные пакеты
