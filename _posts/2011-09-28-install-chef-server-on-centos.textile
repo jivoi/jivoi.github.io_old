@@ -2,7 +2,7 @@
 title: Устанавливаем Chef-Server и Chef-Client на CentOS 6
 layout: post
 syntax-highlighting: yes
-excerpt: Набор команд которые нужно выполнть чтобы все заработал на CentOS 6
+excerpt: Набор команд которые нужно выполнть чтобы все заработало на CentOS 6
 tags:
 - chef-server 
 - chef-client
@@ -11,7 +11,7 @@ tags:
 
 Если кто не знает Chef - это CMT (configuration management tool) написан на ruby.
 
-Набор команд которые нужно выполнть чтобы все заработал на CentOS 6.
+Набор команд которые нужно выполнть чтобы все заработало на CentOS 6.
 Ставить будем на x64, но все это также будет работать и на i386.
 Поехали.
 
