@@ -4,12 +4,66 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-09-29T10:58:25+04:00</updated>
+  <updated>2011-10-05T17:54:43+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
   </author>
 
+  
+  <entry>
+    <title type="html">Install Centos Over Freebsd By Ssh</title>
+    
+      <link href="http://jivoi.github.com/2011/10/05/install-centos-over-freebsd-by-ssh.html"/>
+    
+    <id>http://jivoi.github.com/2011/10/05/install-centos-over-freebsd-by-ssh.html</id>
+    <updated>2011-10-05T00:00:00+04:00</updated>
+    <summary>Liquid error: undefined method `gsub' for nil:NilClass</summary>
+    <content type="html">
+      
+        &lt;p&gt;Руководство как установить CentOS из под FreeBSD по &lt;span class=&quot;caps&quot;&gt;SSH&lt;/span&gt;.&lt;br /&gt;
+Задавайте вопросы в комментах, если что-то не понятно.&lt;/p&gt;
+&lt;p&gt;Данно:&lt;br /&gt;
+1.Настроенный сервер с kickstart&lt;br /&gt;
+2.Сервер с FreeBSD любой версии который будем переустанавливать&lt;br /&gt;
+3.Прямые руки. =)&lt;/p&gt;
+&lt;p&gt;1.Устанавливаем нужные пакеты из портов(GRUB2 и e2fsprogs) на FreeBSD&lt;br /&gt;
+cd /usr/ports/sysutils/grub2&amp;amp;&amp;amp;make install&lt;br /&gt;
+cd /usr/ports/sysutils/e2fsprogs&amp;amp;&amp;amp;make install&lt;/p&gt;
+&lt;p&gt;2.Создаем на разделе /tmp ext2 файловую систему&lt;br /&gt;
+/dev/amrd0s1f              1.9G    155M    1.6G     9%    /tmp&lt;br /&gt;
+/dev/amrd0s1f on /tmp (ufs, local, soft-updates)&lt;/p&gt;
+&lt;p&gt;umount /tmp&lt;br /&gt;
+mke2fs /dev/amrd0s1f&lt;br /&gt;
+mount -t ext2fs /dev/amrd0s1f /mnt&lt;/p&gt;
+&lt;p&gt;Незабыть удалить из /etc/fstab, чтобы можно было загрузится в &lt;span class=&quot;caps&quot;&gt;BSD&lt;/span&gt; если чтото пойдет не так!&lt;/p&gt;
+&lt;p&gt;3. Копируем на ext2 раздел initrd и vmlinuz нужной версии&lt;br /&gt;
+fetch -o /mnt/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img&lt;br /&gt;
+fetch -o /mnt/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz&lt;/p&gt;
+&lt;p&gt;wget -O /initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img&lt;br /&gt;
+wget -O /vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz&lt;/p&gt;
+&lt;p&gt;4.Устанавливаем grub2 в &lt;span class=&quot;caps&quot;&gt;MBR&lt;/span&gt; и создаем кофиг загрузки&lt;br /&gt;
+grub2-install /dev/amrd0&lt;br /&gt;
+grub-mkconfig&lt;br /&gt;
+/usr/local/etc/grub.d/00_header&lt;br /&gt;
+/usr/local/etc/grub.d/40_custom&lt;br /&gt;
+grub-mkconfig -o /boot/grub/grub.cfg&lt;/p&gt;
+&lt;p&gt;Нужнно поправить /usr/local/etc/grub.d/00_header выставив default=1&lt;br /&gt;
+В /usr/local/etc/grub.d/40_custom прописать наш новый тип загрузки, для CentOS 6 x64 он будет следующим.&lt;br /&gt;
+ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ! &lt;br /&gt;
+1.root=&amp;#8216;(hd0,1,f)&amp;#8217; &amp;#8211; буква должна соответствовать букве /tmp слайса!! в нашем случае это /dev/amrd0s1f тоесть f&lt;br /&gt;
+2.ks файл&lt;br /&gt;
+3.IP\&lt;span class=&quot;caps&quot;&gt;GATE&lt;/span&gt;\&lt;span class=&quot;caps&quot;&gt;NETMASK&lt;/span&gt;!&lt;br /&gt;
+4.НЕ ЗАБЫТЬ ВЫПОЛНИТЬ grub-mkconfig -o /boot/grub/grub.cfg чтобы обновился конфиг grub!!&lt;/p&gt;
+&lt;p&gt;menuentry &amp;#8220;CentOS&amp;#8221;  {&lt;br /&gt;
+        insmod ext2&lt;br /&gt;
+        set root=&amp;#8216;(hd0,1,f)&amp;#8217;&lt;br /&gt;
+        linux /vmlinuz_remote lang=en_US keymap=us method=http://ks.example.com/ ks=http://ks.example.com/ks.cfg vnc vncpassword=qwe123 ksdevice=eth0 ip=192.168.0.10 netmask=255.255.255.0 gateway=192.168.0.1 dns=8.8.8.8 noselinux headless&lt;br /&gt;
+        initrd /initrd_remote.img&lt;br /&gt;
+}&lt;/p&gt;
+      
+    </content>
+  </entry>
   
   <entry>
     <title type="html">Устанавливаем Chef-Server и Chef-Client на CentOS 6</title>
