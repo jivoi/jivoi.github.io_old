@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-05T17:55:46+04:00</updated>
+  <updated>2011-10-05T17:56:24+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -23,7 +23,7 @@
       
         &lt;p&gt;Руководство как установить CentOS из под FreeBSD по &lt;span class=&quot;caps&quot;&gt;SSH&lt;/span&gt;.&lt;br /&gt;
 Задавайте вопросы в комментах, если что-то не понятно.&lt;/p&gt;
-&lt;p&gt;Данно:&lt;br /&gt;
+&lt;p&gt;Дано:&lt;br /&gt;
 1.Настроенный сервер с kickstart&lt;br /&gt;
 2.Сервер с FreeBSD любой версии который будем переустанавливать&lt;br /&gt;
 3.Прямые руки. =)&lt;/p&gt;
