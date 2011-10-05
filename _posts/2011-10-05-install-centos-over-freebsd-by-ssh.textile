@@ -4,7 +4,7 @@ layout: post
 syntax-highlighting: yes
 excerpt: Руководство как установить CentOS из под FreeBSD по SSH.
 tags:
--centos 
+- centos 
 ---
 Руководство как установить CentOS из под FreeBSD по SSH.
 Задавайте вопросы в комментах, если что-то не понятно.

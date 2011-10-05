@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-05T17:54:43+04:00</updated>
+  <updated>2011-10-05T17:55:46+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -12,13 +12,13 @@
 
   
   <entry>
-    <title type="html">Install Centos Over Freebsd By Ssh</title>
+    <title type="html">Установка CentOS из под FreeBSD по SSH</title>
     
       <link href="http://jivoi.github.com/2011/10/05/install-centos-over-freebsd-by-ssh.html"/>
     
     <id>http://jivoi.github.com/2011/10/05/install-centos-over-freebsd-by-ssh.html</id>
     <updated>2011-10-05T00:00:00+04:00</updated>
-    <summary>Liquid error: undefined method `gsub' for nil:NilClass</summary>
+    <summary>Руководство как установить CentOS из под FreeBSD по SSH.</summary>
     <content type="html">
       
         &lt;p&gt;Руководство как установить CentOS из под FreeBSD по &lt;span class=&quot;caps&quot;&gt;SSH&lt;/span&gt;.&lt;br /&gt;
