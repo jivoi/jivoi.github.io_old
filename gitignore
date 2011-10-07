@@ -1,0 +1,9 @@
+.DS_Store
+database.yml
+log/*
+pkg
+tmp
+*.log
+ssh/known_hosts
+subversion/auth
+.vim/backups/*

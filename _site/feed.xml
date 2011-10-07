@@ -4,12 +4,49 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-05T17:56:24+04:00</updated>
+  <updated>2011-10-07T12:57:53+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
   </author>
 
+  
+  <entry>
+    <title type="html">Как установить CentOS из CentOS по SSH</title>
+    
+      <link href="http://jivoi.github.com/2011/10/07/install-centos-over-centos-by-ssh.html"/>
+    
+    <id>http://jivoi.github.com/2011/10/07/install-centos-over-centos-by-ssh.html</id>
+    <updated>2011-10-07T00:00:00+04:00</updated>
+    <summary>Как установить CentOS из CentOS по SSH.</summary>
+    <content type="html">
+      
+        &lt;p&gt;Как установить CentOS из CentOS по &lt;span class=&quot;caps&quot;&gt;SSH&lt;/span&gt;.&lt;br /&gt;
+Это нам нужно если мы хотим поменять архитектуру i386 на AMD64 или поставить более новую версии поверх старой.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Дано:&lt;/b&gt;&lt;br /&gt;
+  1.Настроенный сервер с kickstart&lt;br /&gt;
+  2.Сервер с CentOS любой версии который мы будем переустанавливать&lt;br /&gt;
+  3.Прямые руки.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;1. Скачиваем initrd и vmlinuz нужной версии&lt;/b&gt;&lt;br /&gt;
+  wget -O /boot/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img&lt;br /&gt;
+  wget -O /boot/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;2. Правим /boot/grub/grub.conf&lt;/b&gt;&lt;br /&gt;
+&lt;b&gt;ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ!&lt;br /&gt;
+1.ks файл&lt;br /&gt;
+2.IP\&lt;span class=&quot;caps&quot;&gt;GATE&lt;/span&gt;\&lt;span class=&quot;caps&quot;&gt;NETMASK&lt;/span&gt;!&lt;/b&gt;&lt;/p&gt;
+title CentOS Remote Install
+root (hd0,0)
+kernel /vmlinuz_remote lang=en_US keymap=us method=http://ks.relax.ru/ ks=http://ks.relax.ru/ks.cfg ip=80.68.244.59 netmask=255.255.255.224 gateway=80.68.244.33 dns=8.8.8.8 noselinux headless
+initrd /initrd_remote.img
+
+&lt;p&gt;&lt;b&gt;3.Правим порядок загрузки из консоли&lt;/b&gt;&lt;/p&gt;
+Предполагается, что наша конфигурация идет  вторым пунктом меню.
+Мы указали grub попробовать загрузить ее один раз.
+Если что-то пойдет не так, вернемся к ранее установленному дистрибутиву после перезагрузки, через 120 секунд.
+[root@localhost ~]# echo &amp;#8216;savedefault &amp;#8212;default=1 &amp;#8212;once&amp;#8217; | grub &amp;#8212;batch
+      
+    </content>
+  </entry>
   
   <entry>
     <title type="html">Установка CentOS из под FreeBSD по SSH</title>

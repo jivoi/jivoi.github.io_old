@@ -49,5 +49,6 @@ test
 
     EOF
   end
-  puts "Created '_posts/#{time}-#{name}.markdown'"
+  puts "Created 'vi _posts/#{time}-#{name}.textile'"
+  puts "Created 'gedit  _posts/#{time}-#{name}.textile'"
 end

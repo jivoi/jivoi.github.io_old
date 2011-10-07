@@ -4,9 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=550, maximum-scale=1.0" />
   <meta name="keywords" content="jivoi, yajivoi.com, jivoi.github.com" />
-  <meta name="description" content="Небольшое руководство как запустить блог на github.com и jekyll" />
+  <meta name="description" content="Как установить CentOS из CentOS по SSH." />
   <title>
-    Используем Jekyll + Github для блога -  Я Живой. Блог
+    Как установить CentOS из CentOS по SSH -  Я Живой. Блог
   </title>
   <link rel="stylesheet" href="/css/reset.css" type="text/css" />
   
@@ -45,11 +45,11 @@
           </ul>
           <hr class="right"/>
         </div>
-        <h2>Используем Jekyll + Github для блога</h2>
+        <h2>Как установить CentOS из CentOS по SSH</h2>
         
 
 <p class="article_date date">
-  23 Sep 2011
+  07 Oct 2011
 </p>
 
 <span class="article_buttons">
@@ -64,27 +64,29 @@
 <hr/>
 
 <div id="content">
-	<p>Небольшое руководство как запустить блог на github.com и jekyll.</p>
+	<p>Как установить CentOS из CentOS по <span class="caps">SSH</span>.<br />
+Это нам нужно если мы хотим поменять архитектуру i386 на AMD64 или поставить более новую версии поверх старой.</p>
+<p><b>Дано:</b><br />
+  1.Настроенный сервер с kickstart<br />
+  2.Сервер с CentOS любой версии который мы будем переустанавливать<br />
+  3.Прямые руки.</p>
+<p><b>1. Скачиваем initrd и vmlinuz нужной версии</b><br />
+  wget -O /boot/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img<br />
+  wget -O /boot/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz</p>
+<p><b>2. Правим /boot/grub/grub.conf</b><br />
+<b>ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ!<br />
+1.ks файл<br />
+2.IP\<span class="caps">GATE</span>\<span class="caps">NETMASK</span>!</b></p>
+title CentOS Remote Install
+root (hd0,0)
+kernel /vmlinuz_remote lang=en_US keymap=us method=http://ks.relax.ru/ ks=http://ks.relax.ru/ks.cfg ip=80.68.244.59 netmask=255.255.255.224 gateway=80.68.244.33 dns=8.8.8.8 noselinux headless
+initrd /initrd_remote.img
 
-<p><strong>Команды:</strong></p>
-<div class='highlight'><pre><code class='bash'>sudo pacman -S git
-bash &lt; &lt;<span class='o'>(</span>curl -s https://rvm.beginrescueend.com/install/rvm<span class='o'>)</span>
-rvm install 1.9.2
-gem install jekyll
-gem install RedCloth
-easy_install Pygments
-git config --global user.name <span class='s2'>&quot;user&quot;</span>
-git config --global user.email mail@gmail.com
-mkdir blog
-<span class='nb'>cd </span>blog
-git clone git@github.com:jivoi/jivoi.github.com.git
-rake post
-rake deploy
-</code></pre>
-</div>
-<p>Полезные ссылки:</p>
-
-<p><a href='https://github.com/mojombo/jekyll/wiki'>https://github.com/mojombo/jekyll/wiki</a> <br /> <a href='http://klen.github.com/github-blog-ru.html'>http://klen.github.com/github-blog-ru.html</a> <br /> <a href='http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/'>http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/</a> <br /> <a href='http://pyobject.ru/blog/2010/04/15/static-blog-generators/'>http://pyobject.ru/blog/2010/04/15/static-blog-generators/</a> <br /> <a href='http://habrahabr.ru/blogs/webdev/93499/'>http://habrahabr.ru/blogs/webdev/93499/</a> <br /></p>
+<p><b>3.Правим порядок загрузки из консоли</b></p>
+Предполагается, что наша конфигурация идет  вторым пунктом меню.
+Мы указали grub попробовать загрузить ее один раз.
+Если что-то пойдет не так, вернемся к ранее установленному дистрибутиву после перезагрузки, через 120 секунд.
+[root@localhost ~]# echo &#8216;savedefault &#8212;default=1 &#8212;once&#8217; | grub &#8212;batch
 </div>
 
 <span class="article_buttons">
@@ -102,10 +104,6 @@ rake deploy
     <h3>Другие Посты</h3>
     <ul class="posts">
         
-            <li><span>07 Oct 2011</span>
-            -
-            <a href="/2011/10/07/install-centos-over-centos-by-ssh.html">Как установить CentOS из CentOS по SSH</a></li>
-        
             <li><span>05 Oct 2011</span>
             -
             <a href="/2011/10/05/install-centos-over-freebsd-by-ssh.html">Установка CentOS из под FreeBSD по SSH</a></li>
@@ -113,6 +111,10 @@ rake deploy
             <li><span>28 Sep 2011</span>
             -
             <a href="/2011/09/28/install-chef-server-on-centos.html">Устанавливаем Chef-Server и Chef-Client на CentOS 6</a></li>
+        
+            <li><span>23 Sep 2011</span>
+            -
+            <a href="/2011/09/23/ski-ost.html">Саундтреки из Лыжных фильмов</a></li>
         
     </ul>
 </div>
