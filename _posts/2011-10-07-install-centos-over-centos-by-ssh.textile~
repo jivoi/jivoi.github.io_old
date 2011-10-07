@@ -1,7 +1,7 @@
 --- 
 title: Как установить CentOS из CentOS по SSH
 layout: post
-syntax-highlighting: no
+syntax-highlighting: yes
 excerpt: Как установить CentOS из CentOS по SSH.
 tags:
 - centos
