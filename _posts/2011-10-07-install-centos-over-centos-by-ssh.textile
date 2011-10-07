@@ -15,8 +15,10 @@ tags:
   3.Прямые руки.
 
 **1. Скачиваем initrd и vmlinuz нужной версии**
+{% highlight bash %}
   wget -O /boot/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img
   wget -O /boot/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz
+{% endhighlight %}
 
 **2. Правим /boot/grub/grub.conf**
 **ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ!
@@ -35,5 +37,6 @@ tags:
   Предполагается, что наша конфигурация идет  вторым пунктом меню. 
   Мы указали grub попробовать загрузить ее один раз. 
   Если что-то пойдет не так, вернемся к ранее установленному дистрибутиву после перезагрузки, через 120 секунд.
+{% highlight bash %}
   [root@localhost ~]# echo 'savedefault --default=1 --once' | grub --batch
-
+{% endhighlight %}

@@ -71,8 +71,13 @@
   2.Сервер с CentOS любой версии который мы будем переустанавливать<br />
   3.Прямые руки.</p>
 <p><b>1. Скачиваем initrd и vmlinuz нужной версии</b><br />
-  wget -O /boot/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img<br />
-  wget -O /boot/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz</p>
+<div class="highlight"><pre><code class="bash">  wget -O /boot/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img
+  wget -O /boot/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz
+</code><div class="highlight"><pre><code class="bash">  wget -O /boot/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img
+  wget -O /boot/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz
+</code></pre></p>
+</div>
+<p></notextile></p>
 <p><b>2. Правим /boot/grub/grub.conf</b><br />
 <b>ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ!<br />
 1.ks файл<br />
@@ -87,7 +92,9 @@
 Предполагается, что наша конфигурация идет  вторым пунктом меню.
 Мы указали grub попробовать загрузить ее один раз.
 Если что-то пойдет не так, вернемся к ранее установленному дистрибутиву после перезагрузки, через 120 секунд.
-[root@localhost ~]# echo &#8216;savedefault &#8212;default=1 &#8212;once&#8217; | grub &#8212;batch
+<div class="highlight"><pre><code class="bash">  <span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c"># echo &#39;savedefault --default=1 --once&#39; | grub --batch</span>
+</code></pre>
+</div>
 </div>
 
 <span class="article_buttons">
