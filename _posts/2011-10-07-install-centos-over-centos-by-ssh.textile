@@ -25,7 +25,7 @@ tags:
 
   title CentOS Remote Install
   root (hd0,0)
-  kernel /vmlinuz_remote lang=en_US keymap=us method=http://ks.relax.ru/ ks=http://ks.relax.ru/ks.cfg ip=80.68.244.59 netmask=255.255.255.224 gateway=80.68.244.33 dns=8.8.8.8 noselinux headless 
+  kernel /vmlinuz_remote lang=en_US keymap=us method=http://ks.example.com/ ks=http://ks.example.com/ks.cfg ip=192.168.0.10 netmask=255.255.255.0 gateway=192.168.0.1 dns=8.8.8.8 noselinux headless 
   initrd /initrd_remote.img
   
 **3.Правим порядок загрузки из консоли**

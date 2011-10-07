@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-07T12:57:53+04:00</updated>
+  <updated>2011-10-07T12:59:58+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -36,7 +36,7 @@
 2.IP\&lt;span class=&quot;caps&quot;&gt;GATE&lt;/span&gt;\&lt;span class=&quot;caps&quot;&gt;NETMASK&lt;/span&gt;!&lt;/b&gt;&lt;/p&gt;
 title CentOS Remote Install
 root (hd0,0)
-kernel /vmlinuz_remote lang=en_US keymap=us method=http://ks.relax.ru/ ks=http://ks.relax.ru/ks.cfg ip=80.68.244.59 netmask=255.255.255.224 gateway=80.68.244.33 dns=8.8.8.8 noselinux headless
+kernel /vmlinuz_remote lang=en_US keymap=us method=http://ks.example.com/ ks=http://ks.example.com/ks.cfg ip=192.168.0.10 netmask=255.255.255.0 gateway=192.168.0.1 dns=8.8.8.8 noselinux headless
 initrd /initrd_remote.img
 
 &lt;p&gt;&lt;b&gt;3.Правим порядок загрузки из консоли&lt;/b&gt;&lt;/p&gt;
