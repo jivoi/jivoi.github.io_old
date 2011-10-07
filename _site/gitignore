@@ -1,4 +1,5 @@
 .DS_Store
+.textile~
 database.yml
 log/*
 pkg

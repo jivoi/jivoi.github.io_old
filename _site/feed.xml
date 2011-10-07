@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-07T13:01:12+04:00</updated>
+  <updated>2011-10-07T13:04:30+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -34,11 +34,12 @@
 &lt;b&gt;ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ!&lt;br /&gt;
 1.ks файл&lt;br /&gt;
 2.IP\&lt;span class=&quot;caps&quot;&gt;GATE&lt;/span&gt;\&lt;span class=&quot;caps&quot;&gt;NETMASK&lt;/span&gt;!&lt;/b&gt;&lt;/p&gt;
-title CentOS Remote Install
-root (hd0,0)
-kernel /vmlinuz_remote lang=en_US keymap=us method=http://ks.example.com/ ks=http://ks.example.com/ks.cfg ip=192.168.0.10 netmask=255.255.255.0 gateway=192.168.0.1 dns=8.8.8.8 noselinux headless
-initrd /initrd_remote.img
-
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;  title CentOS Remote Install
+  root &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;hd0,0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  kernel /vmlinuz_remote &lt;span class=&quot;nv&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;en_US &lt;span class=&quot;nv&quot;&gt;keymap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;us &lt;span class=&quot;nv&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://ks.example.com/ &lt;span class=&quot;nv&quot;&gt;ks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://ks.example.com/ks.cfg &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;192.168.0.10 &lt;span class=&quot;nv&quot;&gt;netmask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;255.255.255.0 &lt;span class=&quot;nv&quot;&gt;gateway&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;192.168.0.1 &lt;span class=&quot;nv&quot;&gt;dns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8.8.8.8 noselinux headless 
+  initrd /initrd_remote.img
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;b&gt;3.Правим порядок загрузки из консоли&lt;/b&gt;&lt;/p&gt;
 Предполагается, что наша конфигурация идет  вторым пунктом меню.
 Мы указали grub попробовать загрузить ее один раз.

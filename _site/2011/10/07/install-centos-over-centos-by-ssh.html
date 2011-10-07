@@ -77,11 +77,12 @@
 <b>ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ!<br />
 1.ks файл<br />
 2.IP\<span class="caps">GATE</span>\<span class="caps">NETMASK</span>!</b></p>
-title CentOS Remote Install
-root (hd0,0)
-kernel /vmlinuz_remote lang=en_US keymap=us method=http://ks.example.com/ ks=http://ks.example.com/ks.cfg ip=192.168.0.10 netmask=255.255.255.0 gateway=192.168.0.1 dns=8.8.8.8 noselinux headless
-initrd /initrd_remote.img
-
+<div class="highlight"><pre><code class="bash">  title CentOS Remote Install
+  root <span class="o">(</span>hd0,0<span class="o">)</span>
+  kernel /vmlinuz_remote <span class="nv">lang</span><span class="o">=</span>en_US <span class="nv">keymap</span><span class="o">=</span>us <span class="nv">method</span><span class="o">=</span>http://ks.example.com/ <span class="nv">ks</span><span class="o">=</span>http://ks.example.com/ks.cfg <span class="nv">ip</span><span class="o">=</span>192.168.0.10 <span class="nv">netmask</span><span class="o">=</span>255.255.255.0 <span class="nv">gateway</span><span class="o">=</span>192.168.0.1 <span class="nv">dns</span><span class="o">=</span>8.8.8.8 noselinux headless 
+  initrd /initrd_remote.img
+</code></pre>
+</div>
 <p><b>3.Правим порядок загрузки из консоли</b></p>
 Предполагается, что наша конфигурация идет  вторым пунктом меню.
 Мы указали grub попробовать загрузить ее один раз.
