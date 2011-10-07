@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-07T13:15:59+04:00</updated>
+  <updated>2011-10-07T13:26:37+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -27,14 +27,11 @@
   1.Настроенный сервер с kickstart&lt;br /&gt;
   2.Сервер с CentOS любой версии который мы будем переустанавливать&lt;br /&gt;
   3.Прямые руки.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;1. Скачиваем initrd и vmlinuz нужной версии&lt;/b&gt;&lt;br /&gt;
+&lt;p&gt;&lt;b&gt;1. Скачиваем initrd и vmlinuz нужной версии&lt;/b&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;  wget -O /boot/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img
   wget -O /boot/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz
-&lt;/code&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;  wget -O /boot/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img
-  wget -O /boot/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz
-&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;/notextile&gt;&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;2. Правим /boot/grub/grub.conf&lt;/b&gt;&lt;br /&gt;
 &lt;b&gt;ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ!&lt;br /&gt;
 1.ks файл&lt;br /&gt;
@@ -49,6 +46,7 @@
 Предполагается, что наша конфигурация идет  вторым пунктом меню.
 Мы указали grub попробовать загрузить ее один раз.
 Если что-то пойдет не так, вернемся к ранее установленному дистрибутиву после перезагрузки, через 120 секунд.
+
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@localhost ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# echo &amp;#39;savedefault --default=1 --once&amp;#39; | grub --batch&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
