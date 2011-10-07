@@ -15,9 +15,9 @@ end
 
 desc 'Build and deploy'
 task :deploy => :build do
+    sh 'rm -f _posts/*.textile~'
     sh 'jekyll --pygments'
     sh 'git add .'
-    sh 'rm -f _posts/*.textile~'
     sh 'git commit -m "blog"'
     sh 'git push -u origin master'
 end
