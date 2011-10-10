@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-10T12:54:11+04:00</updated>
+  <updated>2011-10-10T12:57:12+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -12,16 +12,16 @@
 
   
   <entry>
-    <title type="html">Ответы для Mail.ru</title>
+    <title type="html">Ответы для Mail.ru - Вакансия &quot;Системный администратор&quot;</title>
     
       <link href="http://jivoi.github.com/2011/10/10/answers-for-mailru.html"/>
     
     <id>http://jivoi.github.com/2011/10/10/answers-for-mailru.html</id>
     <updated>2011-10-10T00:00:00+04:00</updated>
-    <summary>Ответы для Mail.ru</summary>
+    <summary>Ответы для Mail.ru - Вакансия &quot;Системный администратор&quot;</summary>
     <content type="html">
       
-        &lt;p&gt;Ответы для Mail.ru. Это набор вопросов которые присылают HR.&lt;/p&gt;
+        &lt;p&gt;Ответы для Mail.ru. Это набор вопросов которые присылают HR на вакансию &amp;#8220;Системный администратор&amp;#8221;.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Вопрос 1.&lt;/b&gt;  Что такое load average в юникс системах?&lt;br /&gt;
 (Ответ требует конкретной формулировки.)&lt;br /&gt;
 &lt;b&gt;Ответ:&lt;/b&gt; Значение load average показывает кол-во процессов находящихся в состояние готовности, и ждущие пока процессор освободится для их выполнения.&lt;br /&gt;
