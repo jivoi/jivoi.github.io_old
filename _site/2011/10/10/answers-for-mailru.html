@@ -4,9 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=550, maximum-scale=1.0" />
   <meta name="keywords" content="jivoi, yajivoi.com, jivoi.github.com" />
-  <meta name="description" content="Руководство как установить CentOS из под FreeBSD по SSH." />
+  <meta name="description" content="Ответы для mail.ru" />
   <title>
-    Установка CentOS из под FreeBSD по SSH -  Я Живой. Блог
+    Ответы для mail.ru -  Я Живой. Блог
   </title>
   <link rel="stylesheet" href="/css/reset.css" type="text/css" />
   
@@ -45,11 +45,11 @@
           </ul>
           <hr class="right"/>
         </div>
-        <h2>Установка CentOS из под FreeBSD по SSH</h2>
+        <h2>Ответы для mail.ru</h2>
         
 
 <p class="article_date date">
-  05 Oct 2011
+  10 Oct 2011
 </p>
 
 <span class="article_buttons">
@@ -64,46 +64,49 @@
 <hr/>
 
 <div id="content">
-	<p>Руководство как установить CentOS из под FreeBSD по <span class="caps">SSH</span>.<br />
-Задавайте вопросы в комментах, если что-то не понятно.</p>
-<p>Дано:<br />
-1.Настроенный сервер с kickstart<br />
-2.Сервер с FreeBSD любой версии который будем переустанавливать<br />
-3.Прямые руки. =)</p>
-<p>1.Устанавливаем нужные пакеты из портов(GRUB2 и e2fsprogs) на FreeBSD<br />
-cd /usr/ports/sysutils/grub2&amp;&amp;make install<br />
-cd /usr/ports/sysutils/e2fsprogs&amp;&amp;make install</p>
-<p>2.Создаем на разделе /tmp ext2 файловую систему<br />
-/dev/amrd0s1f              1.9G    155M    1.6G     9%    /tmp<br />
-/dev/amrd0s1f on /tmp (ufs, local, soft-updates)</p>
-<p>umount /tmp<br />
-mke2fs /dev/amrd0s1f<br />
-mount -t ext2fs /dev/amrd0s1f /mnt</p>
-<p>Незабыть удалить из /etc/fstab, чтобы можно было загрузится в <span class="caps">BSD</span> если чтото пойдет не так!</p>
-<p>3. Копируем на ext2 раздел initrd и vmlinuz нужной версии<br />
-fetch -o /mnt/initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img<br />
-fetch -o /mnt/vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz</p>
-<p>wget -O /initrd_remote.img http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/initrd.img<br />
-wget -O /vmlinuz_remote http://mirror.yandex.ru/centos/6.0/os/x86_64/isolinux/vmlinuz</p>
-<p>4.Устанавливаем grub2 в <span class="caps">MBR</span> и создаем кофиг загрузки<br />
-grub2-install /dev/amrd0<br />
-grub-mkconfig<br />
-/usr/local/etc/grub.d/00_header<br />
-/usr/local/etc/grub.d/40_custom<br />
-grub-mkconfig -o /boot/grub/grub.cfg</p>
-<p>Нужнно поправить /usr/local/etc/grub.d/00_header выставив default=1<br />
-В /usr/local/etc/grub.d/40_custom прописать наш новый тип загрузки, для CentOS 6 x64 он будет следующим.<br />
-ИЗМЕНИТЬ ВСЕ НУЖНЫЕ ЗНАЧЕНИЯ НА ПРАВИЛЬНЫЕ! <br />
-1.root=&#8216;(hd0,1,f)&#8217; &#8211; буква должна соответствовать букве /tmp слайса!! в нашем случае это /dev/amrd0s1f тоесть f<br />
-2.ks файл<br />
-3.IP\<span class="caps">GATE</span>\<span class="caps">NETMASK</span>!<br />
-4.НЕ ЗАБЫТЬ ВЫПОЛНИТЬ grub-mkconfig -o /boot/grub/grub.cfg чтобы обновился конфиг grub!!</p>
-<p>menuentry &#8220;CentOS&#8221;  {<br />
-        insmod ext2<br />
-        set root=&#8216;(hd0,1,f)&#8217;<br />
-        linux /vmlinuz_remote lang=en_US keymap=us method=http://ks.example.com/ ks=http://ks.example.com/ks.cfg vnc vncpassword=qwe123 ksdevice=eth0 ip=192.168.0.10 netmask=255.255.255.0 gateway=192.168.0.1 dns=8.8.8.8 noselinux headless<br />
-        initrd /initrd_remote.img<br />
-}</p>
+	<p>Ответы для mail.ru. Это набор вопросов которые присылают HR.</p>
+<p><b>Вопрос 1.</b>  Что такое load average в юникс системах?<br />
+(Ответ требует конкретной формулировки.)<br />
+<b>Ответ:</b> Значение load average показывает кол-во процессов находящихся в состояние готовности, и ждущие пока процессор освободится для их выполнения.<br />
+Более подробно тут http://knp84.livejournal.com/4835.html</p>
+<p><b>Вопрос 2.</b> Что означает параметр MaxRequestsPerChild и в каких случаях (для чего) он применяется?<br />
+(Ответ требует конкретной формулировки  + внятного объяснения для чего применяется.)<br />
+<b>Ответ:</b> MaxRequestsPerChild это значение из конфигурации Apache. Она указывает сколько запросов может обработать дочерний процесс апача перед тем как он будет завершен.</p>
+<p><b>Вопрос 3.</b> На сервере заканчивается место в разделе с логами. Какие процессы пишут логи неизвестно, ротейт логов не настроен. Проблему надо разрешить, сохранив сами логи.<br />
+<b>Ответ:</b> Использя команду ls -la посмотреть значение последней модификации файлов, найти самые старые,переместить\сжать их куданить где есть место, так же можно использовать команду find c ключами -mmin\mtime и еще один способо используя команду lsof узнать какие файловые дискрипторы используются на разделе с логами.</p>
+<p><b>Вопрос 4.</b> Напишите программу на bourne shell (не bash!) и/или perl, выводящую простые (делятся на только на 1 и на само себя) числа от 1 до 500.<br />
+<b>Ответ:</b></p>
+<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/sh</span>
+<span class="nb">echo </span>enter a range 
+ <span class="nb">read </span>rng 
+ <span class="nb">echo </span>2 
+ <span class="nv">j</span><span class="o">=</span>3 
+ <span class="k">while </span><span class="nb">test</span> <span class="nv">$j</span> -le <span class="nv">$rng</span> 
+ <span class="k">do </span>
+<span class="k"> </span><span class="nv">i</span><span class="o">=</span>2 
+ <span class="nv">x</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$j</span> - 1<span class="sb">`</span> 
+ <span class="k">while </span><span class="nb">test</span> <span class="nv">$i</span> -le <span class="nv">$x</span> 
+ <span class="k">do </span>
+<span class="k"> if</span> <span class="o">[</span> <span class="sb">`</span>expr <span class="nv">$j</span> % <span class="nv">$i</span><span class="sb">`</span> -ne 0 <span class="o">]</span> 
+ <span class="k">then </span>
+<span class="k"> </span><span class="nv">i</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$i</span> + 1<span class="sb">`</span> 
+ <span class="k">else </span>
+<span class="k"> </span><span class="nb">break </span>
+<span class="nb"> </span><span class="k">fi </span>
+<span class="k"> done </span>
+<span class="k"> if</span> <span class="o">[</span> <span class="nv">$i</span> -eq <span class="nv">$j</span> <span class="o">]</span> 
+ <span class="k">then </span>
+<span class="k"> </span><span class="nb">echo</span> <span class="nv">$j</span> 
+ <span class="k">fi </span>
+<span class="k"> </span><span class="nv">j</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$j</span> + 1<span class="sb">`</span> 
+ <span class="k">done</span>
+</code></pre>
+</div>
+<p><b>Вопрос 5.</b> Написать регулярное выражение под которое подходит число от 1 до 1999<br />
+[1-1999]<br />
+<b>Ответ:</b> echo -e &#8216;10\n2\n199\n10000\n&#8217;|grep -P &#8216;^1?\d{1,3}$&#8217;</p>
+<p><b>Вопрос 6.</b> На каком уровне 7-миуровневой модели <span class="caps">ISO</span> <span class="caps">OSI</span> работает протокол udp? (ответ можо написать названием, можно номером)<br />
+<b>Ответ:</b> Транспортный уровень &#8211; 4 номер.</p>
 </div>
 
 <span class="article_buttons">
@@ -121,13 +124,13 @@ grub-mkconfig -o /boot/grub/grub.cfg</p>
     <h3>Другие Посты</h3>
     <ul class="posts">
         
-            <li><span>10 Oct 2011</span>
-            -
-            <a href="/2011/10/10/answers-for-mailru.html">Ответы для mail.ru</a></li>
-        
             <li><span>07 Oct 2011</span>
             -
             <a href="/2011/10/07/install-centos-over-centos-by-ssh.html">Как установить CentOS из %Your Linux% по SSH</a></li>
+        
+            <li><span>05 Oct 2011</span>
+            -
+            <a href="/2011/10/05/install-centos-over-freebsd-by-ssh.html">Установка CentOS из под FreeBSD по SSH</a></li>
         
             <li><span>28 Sep 2011</span>
             -

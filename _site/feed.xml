@@ -4,12 +4,69 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-10T11:49:01+04:00</updated>
+  <updated>2011-10-10T12:51:37+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
   </author>
 
+  
+  <entry>
+    <title type="html">Ответы для mail.ru</title>
+    
+      <link href="http://jivoi.github.com/2011/10/10/answers-for-mailru.html"/>
+    
+    <id>http://jivoi.github.com/2011/10/10/answers-for-mailru.html</id>
+    <updated>2011-10-10T00:00:00+04:00</updated>
+    <summary>Ответы для mail.ru</summary>
+    <content type="html">
+      
+        &lt;p&gt;Ответы для mail.ru. Это набор вопросов которые присылают HR.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Вопрос 1.&lt;/b&gt;  Что такое load average в юникс системах?&lt;br /&gt;
+(Ответ требует конкретной формулировки.)&lt;br /&gt;
+&lt;b&gt;Ответ:&lt;/b&gt; Значение load average показывает кол-во процессов находящихся в состояние готовности, и ждущие пока процессор освободится для их выполнения.&lt;br /&gt;
+Более подробно тут http://knp84.livejournal.com/4835.html&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Вопрос 2.&lt;/b&gt; Что означает параметр MaxRequestsPerChild и в каких случаях (для чего) он применяется?&lt;br /&gt;
+(Ответ требует конкретной формулировки  + внятного объяснения для чего применяется.)&lt;br /&gt;
+&lt;b&gt;Ответ:&lt;/b&gt; MaxRequestsPerChild это значение из конфигурации Apache. Она указывает сколько запросов может обработать дочерний процесс апача перед тем как он будет завершен.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Вопрос 3.&lt;/b&gt; На сервере заканчивается место в разделе с логами. Какие процессы пишут логи неизвестно, ротейт логов не настроен. Проблему надо разрешить, сохранив сами логи.&lt;br /&gt;
+&lt;b&gt;Ответ:&lt;/b&gt; Использя команду ls -la посмотреть значение последней модификации файлов, найти самые старые,переместить\сжать их куданить где есть место, так же можно использовать команду find c ключами -mmin\mtime и еще один способо используя команду lsof узнать какие файловые дискрипторы используются на разделе с логами.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Вопрос 4.&lt;/b&gt; Напишите программу на bourne shell (не bash!) и/или perl, выводящую простые (делятся на только на 1 и на само себя) числа от 1 до 500.&lt;br /&gt;
+&lt;b&gt;Ответ:&lt;/b&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;enter a range 
+ &lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;rng 
+ &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;2 
+ &lt;span class=&quot;nv&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3 
+ &lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$j&lt;/span&gt; -le &lt;span class=&quot;nv&quot;&gt;$rng&lt;/span&gt; 
+ &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 
+ &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$j&lt;/span&gt; - 1&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; 
+ &lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; -le &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt; 
+ &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt; if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$j&lt;/span&gt; % &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; -ne 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; 
+ &lt;span class=&quot;k&quot;&gt;then &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; + 1&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; 
+ &lt;span class=&quot;k&quot;&gt;else &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;break &lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;fi &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt; done &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt; if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; -eq &lt;span class=&quot;nv&quot;&gt;$j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; 
+ &lt;span class=&quot;k&quot;&gt;then &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$j&lt;/span&gt; 
+ &lt;span class=&quot;k&quot;&gt;fi &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$j&lt;/span&gt; + 1&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; 
+ &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;b&gt;Вопрос 5.&lt;/b&gt; Написать регулярное выражение под которое подходит число от 1 до 1999&lt;br /&gt;
+[1-1999]&lt;br /&gt;
+&lt;b&gt;Ответ:&lt;/b&gt; echo -e &amp;#8216;10\n2\n199\n10000\n&amp;#8217;|grep -P &amp;#8216;^1?\d{1,3}$&amp;#8217;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Вопрос 6.&lt;/b&gt; На каком уровне 7-миуровневой модели &lt;span class=&quot;caps&quot;&gt;ISO&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;OSI&lt;/span&gt; работает протокол udp? (ответ можо написать названием, можно номером)&lt;br /&gt;
+&lt;b&gt;Ответ:&lt;/b&gt; Транспортный уровень &amp;#8211; 4 номер.&lt;/p&gt;
+      
+    </content>
+  </entry>
   
   <entry>
     <title type="html">Как установить CentOS из %Your Linux% по SSH</title>
