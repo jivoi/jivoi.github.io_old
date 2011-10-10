@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-10T12:51:37+04:00</updated>
+  <updated>2011-10-10T12:54:03+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -12,20 +12,20 @@
 
   
   <entry>
-    <title type="html">Ответы для mail.ru</title>
+    <title type="html">Ответы для Mail.ru</title>
     
       <link href="http://jivoi.github.com/2011/10/10/answers-for-mailru.html"/>
     
     <id>http://jivoi.github.com/2011/10/10/answers-for-mailru.html</id>
     <updated>2011-10-10T00:00:00+04:00</updated>
-    <summary>Ответы для mail.ru</summary>
+    <summary>Ответы для Mail.ru</summary>
     <content type="html">
       
-        &lt;p&gt;Ответы для mail.ru. Это набор вопросов которые присылают HR.&lt;/p&gt;
+        &lt;p&gt;Ответы для Mail.ru. Это набор вопросов которые присылают HR.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Вопрос 1.&lt;/b&gt;  Что такое load average в юникс системах?&lt;br /&gt;
 (Ответ требует конкретной формулировки.)&lt;br /&gt;
 &lt;b&gt;Ответ:&lt;/b&gt; Значение load average показывает кол-во процессов находящихся в состояние готовности, и ждущие пока процессор освободится для их выполнения.&lt;br /&gt;
-Более подробно тут http://knp84.livejournal.com/4835.html&lt;/p&gt;
+&lt;a href=&quot;http://knp84.livejournal.com/4835.html&quot;&gt;Более подробно тут&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Вопрос 2.&lt;/b&gt; Что означает параметр MaxRequestsPerChild и в каких случаях (для чего) он применяется?&lt;br /&gt;
 (Ответ требует конкретной формулировки  + внятного объяснения для чего применяется.)&lt;br /&gt;
 &lt;b&gt;Ответ:&lt;/b&gt; MaxRequestsPerChild это значение из конфигурации Apache. Она указывает сколько запросов может обработать дочерний процесс апача перед тем как он будет завершен.&lt;/p&gt;
