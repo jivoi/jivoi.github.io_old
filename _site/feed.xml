@@ -4,7 +4,7 @@
   <title>Я Живой</title>
   <link href="http://jivoi.github.com/feed.xml" rel="self"/>
   <link href="http://jivoi.github.com/"/>
-  <updated>2011-10-07T17:05:26+04:00</updated>
+  <updated>2011-10-10T11:49:01+04:00</updated>
   <id>http://jivoi.github.com/</id>
   <author>
     <name>Я Живой</name>
@@ -12,17 +12,17 @@
 
   
   <entry>
-    <title type="html">Как установить CentOS из CentOS по SSH</title>
+    <title type="html">Как установить CentOS из %Your Linux% по SSH</title>
     
       <link href="http://jivoi.github.com/2011/10/07/install-centos-over-centos-by-ssh.html"/>
     
     <id>http://jivoi.github.com/2011/10/07/install-centos-over-centos-by-ssh.html</id>
     <updated>2011-10-07T00:00:00+04:00</updated>
-    <summary>Как установить CentOS из CentOS по SSH.</summary>
+    <summary>Как установить CentOS из %Your Linux% по SSH.</summary>
     <content type="html">
       
-        &lt;p&gt;Как установить CentOS из CentOS по &lt;span class=&quot;caps&quot;&gt;SSH&lt;/span&gt;.&lt;br /&gt;
-Это нам нужно если мы хотим поменять архитектуру i386 на AMD64 или поставить более новую версии поверх старой.&lt;/p&gt;
+        &lt;p&gt;Как установить CentOS из &lt;span&gt;Your Linux&lt;/span&gt; по &lt;span class=&quot;caps&quot;&gt;SSH&lt;/span&gt;.&lt;br /&gt;
+Это нам нужно если мы хотим поменять архитектуру i386 на AMD64 или поставить более новую версии поверх старой эв случае замены CentOS на CentOS или же если мы хотим заменить ArchLinux на CentOS.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Дано:&lt;/b&gt;&lt;br /&gt;
   1.Настроенный сервер с kickstart&lt;br /&gt;
   2.Сервер с CentOS любой версии который мы будем переустанавливать&lt;br /&gt;

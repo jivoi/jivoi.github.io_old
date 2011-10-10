@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>http://jivoi.github.com/</loc>
-      <lastmod>2011-10-07</lastmod>
+      <lastmod>2011-10-10</lastmod>
       <changefreq>daily</changefreq>
       <priority>1</priority>
    </url>
    <url>
       <loc>http://jivoi.github.com/archive</loc>
-      <lastmod>2011-10-07</lastmod>
+      <lastmod>2011-10-10</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
    </url>

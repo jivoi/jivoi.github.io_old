@@ -1,13 +1,13 @@
 --- 
-title: Как установить CentOS из CentOS по SSH
+title: Как установить CentOS из %Your Linux% по SSH
 layout: post
 syntax-highlighting: no
-excerpt: Как установить CentOS из CentOS по SSH.
+excerpt: Как установить CentOS из %Your Linux% по SSH.
 tags:
 - centos
 ---
-Как установить CentOS из CentOS по SSH.
-Это нам нужно если мы хотим поменять архитектуру i386 на AMD64 или поставить более новую версии поверх старой.
+Как установить CentOS из %Your Linux% по SSH.
+Это нам нужно если мы хотим поменять архитектуру i386 на AMD64 или поставить более новую версии поверх старой эв случае замены CentOS на CentOS или же если мы хотим заменить ArchLinux на CentOS.
 
 **Дано:**
   1.Настроенный сервер с kickstart
