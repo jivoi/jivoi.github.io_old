@@ -21,7 +21,7 @@ git config --global user.name "user"
 git config --global user.email mail@gmail.com
 mkdir blog
 cd blog
-git clone git@github.com:jivoi/jivoi.github.com.git
+git clone git@github.com:jivoi/jivoi.github.io.git
 rake post
 rake deploy
 {% endhighlight %}

@@ -6,7 +6,7 @@ tags:
 - ost
 ---
 
-<p><img src='http://jivoi.github.com/images/blog/snow.jpg' alt='snow' /></p>
+<p><img src='http://jivoi.github.io/images/blog/snow.jpg' alt='snow' /></p>
  
 Достаточно давно я собираю саундтреки(OST) из Сноуборд видео и из года в год их все больше и больше и теперь я хочу поделится ими с вами. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях. Check It!
 

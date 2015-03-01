@@ -7,7 +7,7 @@ tags:
 - chef-server 
 - chef-client
 ---
-<p><img src='http://jivoi.github.com/images/blog/chef.jpg' alt='chef' /></p>
+<p><img src='http://jivoi.github.io/images/blog/chef.jpg' alt='chef' /></p>
 
 Если кто не знает Chef - это CMT (configuration management tool) написан на ruby.
 

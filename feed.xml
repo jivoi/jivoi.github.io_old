@@ -5,10 +5,10 @@ layout: none
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>Я Живой</title>
-  <link href="http://jivoi.github.com/feed.xml" rel="self"/>
-  <link href="http://jivoi.github.com/"/>
+  <link href="http://jivoi.github.io/feed.xml" rel="self"/>
+  <link href="http://jivoi.github.io/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://jivoi.github.com/</id>
+  <id>http://jivoi.github.io/</id>
   <author>
     <name>Я Живой</name>
   </author>
@@ -19,9 +19,9 @@ layout: none
     {% if post.elsewhere %}
       <link href="{{ post.elsewhere.url }}"/>
     {% else %}
-      <link href="http://jivoi.github.com{{ post.url }}"/>
+      <link href="http://jivoi.github.io{{ post.url }}"/>
     {% endif %}
-    <id>http://jivoi.github.com{{ post.url }}</id>
+    <id>http://jivoi.github.io{{ post.url }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <summary>{{ post.excerpt | xml_escape }}</summary>
     <content type="html">

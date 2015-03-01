@@ -98,7 +98,7 @@ $(document).mousemove(
 );
 
 var disabled = false,
-    socket = new io.Socket('jivoi.github.com', {port: 8000}),
+    socket = new io.Socket('jivoi.github.io', {port: 8000}),
     timeouts = {};
 
 if(socket.connect()){

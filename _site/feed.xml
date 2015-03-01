@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>Я Живой</title>
-  <link href="http://jivoi.github.com/feed.xml" rel="self"/>
-  <link href="http://jivoi.github.com/"/>
-  <updated>2012-03-16T15:32:11+04:00</updated>
-  <id>http://jivoi.github.com/</id>
+  <link href="http://jivoi.github.io/feed.xml" rel="self"/>
+  <link href="http://jivoi.github.io/"/>
+  <updated>2015-03-01T15:50:34+03:00</updated>
+  <id>http://jivoi.github.io/</id>
   <author>
     <name>Я Живой</name>
   </author>
@@ -14,9 +14,9 @@
   <entry>
     <title type="html">Ответы для Mail.ru - Вакансия &quot;Системный администратор&quot;</title>
     
-      <link href="http://jivoi.github.com/2011/10/10/answers-for-mailru.html"/>
+      <link href="http://jivoi.github.io/2011/10/10/answers-for-mailru.html"/>
     
-    <id>http://jivoi.github.com/2011/10/10/answers-for-mailru.html</id>
+    <id>http://jivoi.github.io/2011/10/10/answers-for-mailru.html</id>
     <updated>2011-10-10T00:00:00+04:00</updated>
     <summary>Ответы для Mail.ru - Вакансия &quot;Системный администратор&quot;</summary>
     <content type="html">
@@ -71,9 +71,9 @@
   <entry>
     <title type="html">Как установить CentOS из %Your Linux% по SSH</title>
     
-      <link href="http://jivoi.github.com/2011/10/07/install-centos-over-centos-by-ssh.html"/>
+      <link href="http://jivoi.github.io/2011/10/07/install-centos-over-centos-by-ssh.html"/>
     
-    <id>http://jivoi.github.com/2011/10/07/install-centos-over-centos-by-ssh.html</id>
+    <id>http://jivoi.github.io/2011/10/07/install-centos-over-centos-by-ssh.html</id>
     <updated>2011-10-07T00:00:00+04:00</updated>
     <summary>Как установить CentOS из %Your Linux% по SSH.</summary>
     <content type="html">
@@ -114,9 +114,9 @@
   <entry>
     <title type="html">Установка CentOS из под FreeBSD по SSH</title>
     
-      <link href="http://jivoi.github.com/2011/10/05/install-centos-over-freebsd-by-ssh.html"/>
+      <link href="http://jivoi.github.io/2011/10/05/install-centos-over-freebsd-by-ssh.html"/>
     
-    <id>http://jivoi.github.com/2011/10/05/install-centos-over-freebsd-by-ssh.html</id>
+    <id>http://jivoi.github.io/2011/10/05/install-centos-over-freebsd-by-ssh.html</id>
     <updated>2011-10-05T00:00:00+04:00</updated>
     <summary>Руководство как установить CentOS из под FreeBSD по SSH.</summary>
     <content type="html">
@@ -168,14 +168,14 @@ grub-mkconfig -o /boot/grub/grub.cfg&lt;/p&gt;
   <entry>
     <title type="html">Устанавливаем Chef-Server и Chef-Client на CentOS 6</title>
     
-      <link href="http://jivoi.github.com/2011/09/28/install-chef-server-on-centos.html"/>
+      <link href="http://jivoi.github.io/2011/09/28/install-chef-server-on-centos.html"/>
     
-    <id>http://jivoi.github.com/2011/09/28/install-chef-server-on-centos.html</id>
+    <id>http://jivoi.github.io/2011/09/28/install-chef-server-on-centos.html</id>
     <updated>2011-09-28T00:00:00+04:00</updated>
     <summary>Набор команд которые нужно выполнть чтобы все заработало на CentOS 6</summary>
     <content type="html">
       
-        &lt;p&gt;&lt;img src='http://jivoi.github.com/images/blog/chef.jpg' alt='chef' /&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src='http://jivoi.github.io/images/blog/chef.jpg' alt='chef' /&gt;&lt;/p&gt;
 &lt;p&gt;Если кто не знает Chef &amp;#8211; это &lt;span class=&quot;caps&quot;&gt;CMT&lt;/span&gt; (configuration management tool) написан на ruby.&lt;/p&gt;
 &lt;p&gt;Набор команд которые нужно выполнть чтобы все заработало на CentOS 6.&lt;br /&gt;
 Ставить будем на x64, но все это также будет работать и на i386.&lt;br /&gt;
@@ -251,14 +251,14 @@ $&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt; -A &lt;span class=&quot;cap
   <entry>
     <title type="html">Саундтреки из Лыжных фильмов</title>
     
-      <link href="http://jivoi.github.com/2011/09/23/ski-ost.html"/>
+      <link href="http://jivoi.github.io/2011/09/23/ski-ost.html"/>
     
-    <id>http://jivoi.github.com/2011/09/23/ski-ost.html</id>
+    <id>http://jivoi.github.io/2011/09/23/ski-ost.html</id>
     <updated>2011-09-23T00:00:00+04:00</updated>
     <summary>Спешу поделится с вами небольшой но постоянно растущей коллекцией саундреков из лыжных фильмов. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.</summary>
     <content type="html">
       
-        &lt;p&gt;&lt;img src='http://jivoi.github.com/images/blog/ski.jpg' alt='ski' /&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src='http://jivoi.github.io/images/blog/ski.jpg' alt='ski' /&gt;&lt;/p&gt;
 &lt;p&gt;Спешу поделится с вами небольшой но постоянно растущей коллекцией саундреков из лыжных фильмов. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Список&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;1. Propaganda (Poor Boyz Productions, 2001) &lt;a href=&quot;http://oigen.ifolder.ru/25955013&quot; target=&quot;_blank&quot;&gt;Скачать&lt;/a&gt; &lt;br /&gt;
@@ -299,9 +299,9 @@ $&lt;span class=&quot;caps&quot;&gt;IPT&lt;/span&gt; -A &lt;span class=&quot;cap
   <entry>
     <title type="html">Используем Jekyll + Github для блога</title>
     
-      <link href="http://jivoi.github.com/2011/09/23/install-jekyll-blog.html"/>
+      <link href="http://jivoi.github.io/2011/09/23/install-jekyll-blog.html"/>
     
-    <id>http://jivoi.github.com/2011/09/23/install-jekyll-blog.html</id>
+    <id>http://jivoi.github.io/2011/09/23/install-jekyll-blog.html</id>
     <updated>2011-09-23T00:00:00+04:00</updated>
     <summary>Небольшое руководство как запустить блог на github.com и jekyll</summary>
     <content type="html">
@@ -319,7 +319,7 @@ git config --global user.name &lt;span class='s2'&gt;&amp;quot;user&amp;quot;&lt
 git config --global user.email mail@gmail.com
 mkdir blog
 &lt;span class='nb'&gt;cd &lt;/span&gt;blog
-git clone git@github.com:jivoi/jivoi.github.com.git
+git clone git@github.com:jivoi/jivoi.github.io.git
 rake post
 rake deploy
 &lt;/code&gt;&lt;/pre&gt;
@@ -334,14 +334,14 @@ rake deploy
   <entry>
     <title type="html">MTB саундтреки</title>
     
-      <link href="http://jivoi.github.com/2011/09/22/mtb-ost.html"/>
+      <link href="http://jivoi.github.io/2011/09/22/mtb-ost.html"/>
     
-    <id>http://jivoi.github.com/2011/09/22/mtb-ost.html</id>
+    <id>http://jivoi.github.io/2011/09/22/mtb-ost.html</id>
     <updated>2011-09-22T00:00:00+04:00</updated>
     <summary>Немного саундтреков для любителей MTB. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.</summary>
     <content type="html">
       
-        &lt;p&gt;&lt;img src='http://jivoi.github.com/images/blog/mtb.jpg' alt='mtb' /&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src='http://jivoi.github.io/images/blog/mtb.jpg' alt='mtb' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Немного саундтреков для любителей &lt;span class=&quot;caps&quot;&gt;MTB&lt;/span&gt;. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.&lt;/p&gt;
 &lt;p&gt;Список:&lt;/p&gt;
@@ -363,14 +363,14 @@ rake deploy
   <entry>
     <title type="html">Сноуборд саундтреки</title>
     
-      <link href="http://jivoi.github.com/2011/09/21/snowboard-ost.html"/>
+      <link href="http://jivoi.github.io/2011/09/21/snowboard-ost.html"/>
     
-    <id>http://jivoi.github.com/2011/09/21/snowboard-ost.html</id>
+    <id>http://jivoi.github.io/2011/09/21/snowboard-ost.html</id>
     <updated>2011-09-21T00:00:00+04:00</updated>
     <summary>Достаточно давно я собираю саундтреки(OST) из Сноуборд видео и из года в год их все больше и больше и теперь я хочу поделится ими с вами. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях. Check It!</summary>
     <content type="html">
       
-        &lt;p&gt;&lt;img src='http://jivoi.github.com/images/blog/snow.jpg' alt='snow' /&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src='http://jivoi.github.io/images/blog/snow.jpg' alt='snow' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Достаточно давно я собираю саундтреки(&lt;span class=&quot;caps&quot;&gt;OST&lt;/span&gt;) из Сноуборд видео и из года в год их все больше и больше и теперь я хочу поделится ими с вами. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях. Check It!&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Список:&lt;/b&gt;&lt;br /&gt;

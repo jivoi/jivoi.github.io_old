@@ -1,3 +1,0 @@
-h1. jivoi.github.com
-
-Персональный блог . ["Клик":http://jivoi.github.com]!

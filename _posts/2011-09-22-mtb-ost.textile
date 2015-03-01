@@ -6,7 +6,7 @@ tags:
 - ost
 ---
 
-<p><img src='http://jivoi.github.com/images/blog/mtb.jpg' alt='mtb' /></p>
+<p><img src='http://jivoi.github.io/images/blog/mtb.jpg' alt='mtb' /></p>
  
 Немного саундтреков для любителей MTB. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.
 

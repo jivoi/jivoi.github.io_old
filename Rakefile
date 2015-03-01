@@ -40,7 +40,7 @@ excerpt:
 tags:
 - 
 ---
-<p><img src='http://jivoi.github.com/images/blog/.jpg' alt='' /></p>
+<p><img src='http://jivoi.github.io/images/blog/.jpg' alt='' /></p>
 
 ![Alt-text](URL "Img Title")
 

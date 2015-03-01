@@ -6,7 +6,7 @@ tags:
 - ost
 ---
 
-<p><img src='http://jivoi.github.com/images/blog/ski.jpg' alt='ski' /></p>
+<p><img src='http://jivoi.github.io/images/blog/ski.jpg' alt='ski' /></p>
 
 Спешу поделится с вами небольшой но постоянно растущей коллекцией саундреков из лыжных фильмов. Все ссылки проверенны, если вы в друг нашли ошибку, пишите в комментариях.
 

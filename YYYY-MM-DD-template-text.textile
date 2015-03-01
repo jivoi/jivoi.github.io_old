@@ -10,7 +10,7 @@ Main text
 some commands
 {% endhighlight %}
 
-![Description for Img](http://jivoi.github.com/images/.png)
+![Description for Img](http://jivoi.github.io/images/.png)
 <span class="small">Text under the picture</span>
 
 ### Janus
