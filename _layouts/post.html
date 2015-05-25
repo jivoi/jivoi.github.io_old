@@ -9,7 +9,7 @@ layout: default
 {% endif %}
 
 <p class="article_date date">
-  {{page.date | date_to_string}}
+  {{page.date | to_date_string}}
 </p>
 
 <span class="article_buttons">
@@ -42,7 +42,7 @@ layout: default
     <h3>Другие Посты</h3>
     <ul class="posts">
         {% for post in site.related_posts limit:3 %}
-            <li><span>{{ post.date | date_to_string }}</span>
+            <li><span>{{ page.date | to_date_string }}</span>
             -
             <a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}

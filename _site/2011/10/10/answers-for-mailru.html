@@ -49,7 +49,7 @@
         
 
 <p class="article_date date">
-  10 Oct 2011
+  2011-10-10 00:00:00 +0400
 </p>
 
 <span class="article_buttons">
@@ -76,33 +76,30 @@
 <b>Ответ:</b> Использя команду ls -la посмотреть значение последней модификации файлов, найти самые старые,переместить\сжать их куданить где есть место, так же можно использовать команду find c ключами -mmin\mtime и еще один способо используя команду lsof узнать какие файловые дискрипторы используются на разделе с логами.</p>
 <p><b>Вопрос 4.</b> Напишите программу на bourne shell (не bash!) и/или perl, выводящую простые (делятся на только на 1 и на само себя) числа от 1 до 500.<br />
 <b>Ответ:</b></p>
-<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/sh</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/sh</span>
 <span class="nb">echo </span>enter a range 
  <span class="nb">read </span>rng 
- <span class="nb">echo </span>2 
- <span class="nv">j</span><span class="o">=</span>3 
- <span class="k">while </span><span class="nb">test</span> <span class="nv">$j</span> -le <span class="nv">$rng</span> 
- <span class="k">do </span>
-<span class="k"> </span><span class="nv">i</span><span class="o">=</span>2 
+ <span class="nb">echo </span><span class="m">2</span> 
+ <span class="nv">j</span><span class="o">=</span><span class="m">3</span> 
+ <span class="k">while</span> <span class="nb">test</span> <span class="nv">$j</span> -le <span class="nv">$rng</span> 
+ <span class="k">do</span> 
+ <span class="nv">i</span><span class="o">=</span><span class="m">2</span> 
  <span class="nv">x</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$j</span> - 1<span class="sb">`</span> 
- <span class="k">while </span><span class="nb">test</span> <span class="nv">$i</span> -le <span class="nv">$x</span> 
- <span class="k">do </span>
-<span class="k"> if</span> <span class="o">[</span> <span class="sb">`</span>expr <span class="nv">$j</span> % <span class="nv">$i</span><span class="sb">`</span> -ne 0 <span class="o">]</span> 
- <span class="k">then </span>
-<span class="k"> </span><span class="nv">i</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$i</span> + 1<span class="sb">`</span> 
- <span class="k">else </span>
-<span class="k"> </span><span class="nb">break </span>
-<span class="nb"> </span><span class="k">fi </span>
-<span class="k"> done </span>
-<span class="k"> if</span> <span class="o">[</span> <span class="nv">$i</span> -eq <span class="nv">$j</span> <span class="o">]</span> 
- <span class="k">then </span>
-<span class="k"> </span><span class="nb">echo</span> <span class="nv">$j</span> 
- <span class="k">fi </span>
-<span class="k"> </span><span class="nv">j</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$j</span> + 1<span class="sb">`</span> 
- <span class="k">done</span>
-</code></pre>
-</div>
-<p><b>Вопрос 5.</b> Написать регулярное выражение под которое подходит число от 1 до 1999<br />
+ <span class="k">while</span> <span class="nb">test</span> <span class="nv">$i</span> -le <span class="nv">$x</span> 
+ <span class="k">do</span> 
+ <span class="k">if</span> <span class="o">[</span> <span class="sb">`</span>expr <span class="nv">$j</span> % <span class="nv">$i</span><span class="sb">`</span> -ne <span class="m">0</span> <span class="o">]</span> 
+ <span class="k">then</span> 
+ <span class="nv">i</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$i</span> + 1<span class="sb">`</span> 
+ <span class="k">else</span> 
+ <span class="nb">break </span>
+<span class="nb"> </span><span class="k">fi</span> 
+ <span class="k">done</span> 
+ <span class="k">if</span> <span class="o">[</span> <span class="nv">$i</span> -eq <span class="nv">$j</span> <span class="o">]</span> 
+ <span class="k">then</span> 
+ <span class="nb">echo</span> <span class="nv">$j</span> 
+ <span class="k">fi</span> 
+ <span class="nv">j</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$j</span> + 1<span class="sb">`</span> 
+ <span class="k">done</span></code></pre></div><p><b>Вопрос 5.</b> Написать регулярное выражение под которое подходит число от 1 до 1999<br />
 [1-1999]<br />
 <b>Ответ:</b> echo -e &#8216;10\n2\n199\n10000\n&#8217;|grep -P &#8216;^1?\d{1,3}$&#8217;</p>
 <p><b>Вопрос 6.</b> На каком уровне 7-миуровневой модели <span class="caps">ISO</span> <span class="caps">OSI</span> работает протокол udp? (ответ можо написать названием, можно номером)<br />
@@ -124,15 +121,15 @@
     <h3>Другие Посты</h3>
     <ul class="posts">
         
-            <li><span>07 Oct 2011</span>
+            <li><span>2011-10-10 00:00:00 +0400</span>
             -
             <a href="/2011/10/07/install-centos-over-centos-by-ssh.html">Как установить CentOS из %Your Linux% по SSH</a></li>
         
-            <li><span>05 Oct 2011</span>
+            <li><span>2011-10-10 00:00:00 +0400</span>
             -
             <a href="/2011/10/05/install-centos-over-freebsd-by-ssh.html">Установка CentOS из под FreeBSD по SSH</a></li>
         
-            <li><span>28 Sep 2011</span>
+            <li><span>2011-10-10 00:00:00 +0400</span>
             -
             <a href="/2011/09/28/install-chef-server-on-centos.html">Устанавливаем Chef-Server и Chef-Client на CentOS 6</a></li>
         
